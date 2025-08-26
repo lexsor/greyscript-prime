@@ -1,0 +1,490 @@
+// ====================================================================
+// GreyScript Snippets Smoke Test — STRING
+// Auto-generated from strings_define.json + strings_call.json
+// Save as test_string.src or .gs in VS Code to verify snippets.
+// ====================================================================
+
+// ---------- DEFINITIONS: STRING ----------
+
+string.italic = function()
+    return "<i>" + self + "</i>"
+end function
+
+string.line_indent = function(lineIndent = "15%", closeTag = true)
+    if locals.closeTag == false then
+        return "<line-indent=" + locals.lineIndent + ">" + self
+    else
+        return "<line-indent=" + locals.lineIndent + ">" + self + "</line-indent>"
+    end if
+    return null
+end function
+
+string.lowercase = function()
+    return "<lowercase>" + self + "</lowercase>"
+end function
+
+string.margin = function(marginSpace = "5em")
+    return "<margin=" + locals.marginSpace + ">" + self + "</margin>"
+end function
+
+string.mark = function(color="#FFFF00BF")
+    return "<mark=" + locals.color + ">" + self + "</mark>"
+end function
+
+string.alpha = function(hexOpacity = "#FF")
+    return "<alpha=" + locals.hexOpacity + ">" + self
+end function
+
+string.bold = function()
+    return "<b>" + self + "</b>"
+end function
+
+string.color = function(colorValue)
+	if not typeof(colorValue) == "string" then return self
+	//*****************************************************
+	// Red HEX Codes
+	//*****************************************************
+	if colorValue == "IndianRed" then colorValue = "#CD5C5C"
+	if colorValue == "LightCoral" then colorValue = "#F08080"
+	if colorValue == "Salmon" then colorValue = "#FA8072"
+	if colorValue == "DarkSalmon" then colorValue = "#E9967A"
+	if colorValue == "LightSalmon" then colorValue = "#FFA07A"
+	if colorValue == "Crimson" then colorValue = "#DC143C"
+	if colorValue == "Red" then colorValue = "#FF0000"
+	if colorValue == "FireBrick" then colorValue = "#B22222"
+	if colorValue == "DarkRed" then colorValue = "#8B0000"
+	//*****************************************************
+	// Pink HEX Codes
+	//*****************************************************
+	if colorValue == "Pink" then colorValue = "#FFC0CB"
+	if colorValue == "LightPink" then colorValue = "#FFB6C1"
+	if colorValue == "HotPink" then colorValue = "#FF69B4"
+	if colorValue == "DeepPink" then colorValue = "#FF1493"
+	if colorValue == "MediumVioletRed" then colorValue = "#C71585"
+	if colorValue == "PaleVioletRed" then colorValue = "#DB7093"
+	//*****************************************************
+	// Orange HEX Codes
+	//*****************************************************
+	if colorValue == "Coral" then colorValue = "#FF7F50"
+	if colorValue == "Tomato" then colorValue = "#FF6347"
+	if colorValue == "OrangeRed" then colorValue = "#FF4500"
+	if colorValue == "DarkOrange" then colorValue = "#FF8C00"
+	if colorValue == "Orange" then colorValue = "#FFA500"
+	//*****************************************************
+	// Yellow HEX Codes
+	//*****************************************************
+	if colorValue == "Gold" then colorValue = "#FFD700"
+	if colorValue == "Yellow" then colorValue = "#FFFF00"
+	if colorValue == "LightYellow" then colorValue = "#FFFFE0"
+	if colorValue == "LemonChiffon" then colorValue = "#FFFACD"
+	if colorValue == "LightGoldenrodYellow" then colorValue = "#FAFAD2"
+	if colorValue == "PapayaWhip" then colorValue = "#FFEFD5"
+	if colorValue == "Moccasin" then colorValue = "#FFE4B5"
+	if colorValue == "PeachPuff" then colorValue = "#FFDAB9"
+	if colorValue == "PaleGoldenrod" then colorValue = "#EEE8AA"
+	if colorValue == "Khaki" then colorValue = "#F0E68C"
+	if colorValue == "DarkKhaki" then colorValue = "#BDB76B"
+	//*****************************************************
+	// Purple HEX Codes
+	//*****************************************************
+	if colorValue == "Lavender" then colorValue = "#E6E6FA"
+	if colorValue == "Thistle" then colorValue = "#D8BFD8"
+	if colorValue == "Plum" then colorValue = "#DDA0DD"
+	if colorValue == "Violet" then colorValue = "#EE82EE"
+	if colorValue == "Orchid" then colorValue = "#DA70D6"
+	if colorValue == "Fuchsia" then colorValue = "#FF00FF"
+	if colorValue == "Magenta" then colorValue = "#FF00FF"
+	if colorValue == "MediumOrchid" then colorValue = "#BA55D3"
+	if colorValue == "MediumPurple" then colorValue = "#9370DB"
+	if colorValue == "RebeccaPurple" then colorValue = "#663399"
+	if colorValue == "BlueViolet" then colorValue = "#8A2BE2"
+	if colorValue == "DarkViolet" then colorValue = "#9400D3"
+	if colorValue == "DarkOrchid" then colorValue = "#9932CC"
+	if colorValue == "DarkMagenta" then colorValue = "#8B008B"
+	if colorValue == "Purple" then colorValue = "#800080"
+	if colorValue == "Indigo" then colorValue = "#4B0082"
+	if colorValue == "SlateBlue" then colorValue = "#6A5ACD"
+	if colorValue == "DarkSlateBlue" then colorValue = "#483D8B"
+	//*****************************************************
+	// Green HEX Codes
+	//*****************************************************
+	if colorValue == "GreenYellow" then colorValue = "#ADFF2F"
+	if colorValue == "Chartreuse" then colorValue = "#7FFF00"
+	if colorValue == "LawnGreen" then colorValue = "#7CFC00"
+	if colorValue == "Lime" then colorValue = "#00FF00"
+	if colorValue == "LimeGreen" then colorValue = "#32CD32"
+	if colorValue == "PaleGreen" then colorValue = "#98FB98"
+	if colorValue == "LightGreen" then colorValue = "#90EE90"
+	if colorValue == "MediumSpringGreen" then colorValue = "#00FA9A"
+	if colorValue == "SpringGreen" then colorValue = "#00FF7F"
+	if colorValue == "SeaGreen" then colorValue = "#2E8B57"
+	if colorValue == "ForestGreen" then colorValue = "#228B22"
+	if colorValue == "Green" then colorValue = "#008000"
+	if colorValue == "DarkGreen" then colorValue = "#006400"
+	if colorValue == "YellowGreen" then colorValue = "#9ACD32"
+	if colorValue == "OliveDrab" then colorValue = "#6B8E23"
+	if colorValue == "Olive" then colorValue = "#808000"
+	if colorValue == "DarkOliveGreen" then colorValue = "#556B2F"
+	if colorValue == "MediumAquamarine" then colorValue = "#66CDAA"
+	if colorValue == "DarkSeaGreen" then colorValue = "#8FBC8B"
+	if colorValue == "LightSeaGreen" then colorValue = "#20B2AA"
+	if colorValue == "DarkCyan" then colorValue = "#008B8B"
+	if colorValue == "Teal" then colorValue = "#008080"
+	//*****************************************************
+	// Blue HEX Codes
+	//*****************************************************
+	if colorValue == "Aqua" then colorValue = "#00FFFF"
+	if colorValue == "Cyan" then colorValue = "#00FFFF"
+	if colorValue == "LightCyan" then colorValue = "#E0FFFF"
+	if colorValue == "PaleTurquoise" then colorValue = "#AFEEEE"
+	if colorValue == "Aquamarine" then colorValue = "#7FFFD4"
+	if colorValue == "Turquoise" then colorValue = "#40E0D0"
+	if colorValue == "MediumTurquoise" then colorValue = "#48D1CC"
+	if colorValue == "DarkTurquoise" then colorValue = "#00CED1"
+	if colorValue == "CadetBlue" then colorValue = "#5F9EA0"
+	if colorValue == "SteelBlue" then colorValue = "#4682B4"
+	if colorValue == "LightSteelBlue" then colorValue = "#B0C4DE"
+	if colorValue == "PowderBlue" then colorValue = "#B0E0E6"
+	if colorValue == "LightBlue" then colorValue = "#ADD8E6"
+	if colorValue == "SkyBlue" then colorValue = "#87CEEB"
+	if colorValue == "LightSkyBlue" then colorValue = "#87CEFA"
+	if colorValue == "DeepSkyBlue" then colorValue = "#00BFFF"
+	if colorValue == "DodgerBlue" then colorValue = "#1E90FF"
+	if colorValue == "CornflowerBlue" then colorValue = "#6495ED"
+	if colorValue == "MediumSlateBlue" then colorValue = "#7B68EE"
+	if colorValue == "RoyalBlue" then colorValue = "#4169E1"
+	if colorValue == "Blue" then colorValue = "#0000FF"
+	if colorValue == "MediumBlue" then colorValue = "#0000CD"
+	if colorValue == "DarkBlue" then colorValue = "#00008B"
+	if colorValue == "Navy" then colorValue = "#000080"
+	if colorValue == "MidnightBlue" then colorValue = "#191970"
+	//*****************************************************
+	// Brown HEX Codes
+	//*****************************************************
+	if colorValue == "Cornsilk" then colorValue = "#FFF8DC"
+	if colorValue == "BlanchedAlmond" then colorValue = "#FFEBCD"
+	if colorValue == "Bisque" then colorValue = "#FFE4C4"
+	if colorValue == "NavajoWhite" then colorValue = "#FFDEAD"
+	if colorValue == "Wheat" then colorValue = "#F5DEB3"
+	if colorValue == "BurlyWood" then colorValue = "#DEB887"
+	if colorValue == "Tan" then colorValue = "#D2B48C"
+	if colorValue == "RosyBrown" then colorValue = "#BC8F8F"
+	if colorValue == "SandyBrown" then colorValue = "#F4A460"
+	if colorValue == "Goldenrod" then colorValue = "#DAA520"
+	if colorValue == "DarkGoldenrod" then colorValue = "#B8860B"
+	if colorValue == "Peru" then colorValue = "#CD853F"
+	if colorValue == "Chocolate" then colorValue = "#D2691E"
+	if colorValue == "SaddleBrown" then colorValue = "#8B4513"
+	if colorValue == "Sienna" then colorValue = "#A0522D"
+	if colorValue == "Brown" then colorValue = "#A52A2A"
+	if colorValue == "Maroon" then colorValue = "#800000"
+	//*****************************************************
+	// White HEX Codes
+	//*****************************************************
+	if colorValue == "White" then colorValue = "#FFFFFF"
+	if colorValue == "Snow" then colorValue = "#FFFAFA"
+	if colorValue == "HoneyDew" then colorValue = "#F0FFF0"
+	if colorValue == "MintCream" then colorValue = "#F5FFFA"
+	if colorValue == "Azure" then colorValue = "#F0FFFF"
+	if colorValue == "AliceBlue" then colorValue = "#F0F8FF"
+	if colorValue == "GhostWhite" then colorValue = "#F8F8FF"
+	if colorValue == "WhiteSmoke" then colorValue = "#F5F5F5"
+	if colorValue == "SeaShell" then colorValue = "#FFF5EE"
+	if colorValue == "Beige" then colorValue = "#F5F5DC"
+	if colorValue == "OldLace" then colorValue = "#FDF5E6"
+	if colorValue == "FloralWhite" then colorValue = "#FFFAF0"
+	if colorValue == "Ivory" then colorValue = "#FFFFF0"
+	if colorValue == "AntiqueWhite" then colorValue = "#FAEBD7"
+	if colorValue == "Linen" then colorValue = "#FAF0E6"
+	if colorValue == "LavenderBlush" then colorValue = "#FFF0F5"
+	if colorValue == "MistyRose" then colorValue = "#FFE4E1"
+	//*****************************************************
+	// Grey HEX Codes
+	//*****************************************************
+	if colorValue == "Gainsboro" then colorValue = "#DCDCDC"
+	if colorValue == "LightGray" then colorValue = "#D3D3D3"
+	if colorValue == "Silver" then colorValue = "#C0C0C0"
+	if colorValue == "DarkGray" then colorValue = "#A9A9A9"
+	if colorValue == "Gray" then colorValue = "#808080"
+	if colorValue == "DimGray" then colorValue = "#696969"
+	if colorValue == "LightSlateGray" then colorValue = "#778899"
+	if colorValue == "SlateGray" then colorValue = "#708090"
+	if colorValue == "DarkSlateGray" then colorValue = "#2F4F4F"
+	if colorValue == "Black" then colorValue = "#000000"
+	//*****************************************************
+	return "<color=" + colorValue + ">" + self + "</color>"
+end function
+
+string.cspace = function(charSpacing = "1em", closeTag = true)
+    if locals.closeTag == true then
+        return "<cspace=" + locals.charSpacing + ">" + self + "</cspace>"
+    end if
+    if locals.closeTag == false then
+        return "<cspace=" + locals.charSpacing + ">" + self
+    end if
+end function
+
+string.indent = function(indentPercent="15%", closeTag = true)
+    if locals.closeTag == false then
+        return "<indent=" + locals.indentPercent + ">" + self
+    else
+        return "<indent=" + locals.indentPercent + ">" + self + "</indent>"
+    end if
+    return null
+end function
+
+string.extract = function(self, tagStart = "<b>", tagEnd = "</b>")
+    locals.startIndex = self.indexOf(tagStart) + tagStart.len
+    locals.endIndex = self.indexOf(tagEnd)
+    return slice(self, locals.startIndex, locals.endIndex)
+end function
+
+string.format = function(self, args, delim = "%s")
+    locals.splitStr = self.split(locals.delim)
+    locals.recompStr = ""
+    for i in range(0, locals.args.len()-1)
+        locals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]
+    end for
+    locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]
+    return locals.recompStr
+end function
+
+string.mask = function(self, maskString = true, maskChar = char(42), maskColor = null)
+    if locals.maskColor != null then
+        locals.maskChar = "<" + locals.maskColor + ">" + locals.maskChar + "</color>"
+    end if
+    locals.ipPattern = "\b(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\.){3}(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)\b"
+    locals.matchList = self.matches(locals.ipPattern)
+    locals.newString = ""
+    if locals.maskString == false then return self
+    if locals.matchList.len > 0 then
+        locals.newString = self
+        for match in locals.matchList
+            locals.newString = locals.newString.replace(locals.match.value, locals.maskChar * locals.match.value.len)
+        end for
+        return locals.newString
+    else
+        return self
+    end if
+end function
+
+string.remove_bold = function(self)
+    locals.newString = self.remove("<b>")
+    return locals.newString.remove("</b>")
+end function
+
+string.remove_char_first = function(self)
+    return slice(self, 1, self.len)
+end function
+
+string.remove_char_last = function(self)
+    return slice(self, 0, (self.len - 1))
+end function
+
+string.remove_italic = function(self)
+    locals.newString = self.remove("<i>")
+    return locals.newString.remove("</i>")
+end function
+
+string.remove_mark = function(self)
+    locals.newString = self.remove("<mark>")
+    return locals.newString.remove("</mark>")
+end function
+
+string.remove_strike = function(self)
+    locals.newString = self.remove("<s>")
+    return locals.newString.remove("</s>")
+end function
+
+string.remove_sub = function(self)
+    locals.newString = self.remove("<sub>")
+    return locals.newString.remove("</sub>")
+end function
+
+string.remove_sup = function(self)
+    locals.newString = self.remove("<sup>")
+    return locals.newString.remove("</sup>")
+end function
+
+string.remove_underline = function(self)
+    locals.newString = self.remove("<u>")
+    return locals.newString.remove("</u>")
+end function
+
+string.align = function(self, alignment = "center", closeTag = true)
+    locals.newString = "<align=" + locals.alignment + ">" + self
+    if locals.closeTag == true then locals.newString = locals.newString + "</align>"
+    return locals.newString
+end function
+
+string.uppercase = function()
+        return "<uppercase>" + self + "</uppercase>"
+    end function
+
+string.voffset = function(verticalOffset = "1em")
+        return "<voffset=" + locals.verticalOffset + ">" + self + "</voffset>"
+    end function
+
+string.width = function(hSize = "50%")
+        return "<width=" + locals.hSize + ">" + self + "</width>"
+    end function
+
+string.underline = function()
+    return "<u>" + self + "</u>"
+end function
+
+string.pos = function(position = "50%")
+    return "<pos=" + locals.position + ">" + self
+end function
+
+string.rotate = function(degreesRotation = "45")
+    return "<rotate=" + char(34) + locals.degreesRotation + char(34) + ">" + self + "</rotate>"
+end function
+
+string.size = function(textSize = "5em")
+    return "<size=" + locals.textSize + ">" + self + "</size>"
+end function
+
+string.strike = function()
+        return "<s>" + self + "</s>"
+    end function
+
+string.sub = function()
+        return "<sub>" + self + "</sub>"
+    end function
+
+string.sup = function()
+        return "<sup>" + self + "</sup>"
+    end function
+
+string.mspace = function(monospace = "2.75em")
+    return "<mspace=" + locals.monospace + ">" + self + "</mspace>"
+end function
+
+string.nobr = function()
+    return "<nobr>" + self + "</nobr>"
+end function
+
+string.noparse = function()
+    return "<noparse>" + self + "</noparse>"
+end function
+
+string.page = function()
+        return self + "<page>"
+    end function
+
+
+// ---------- CALLS: STRING ----------
+txt = "Hello <b>World</b> 192.168.1.1"
+
+// string.align
+print(txt.align("center", true))
+
+// string.alpha
+print(txt.alpha("#FF"))
+
+// string.bold
+print(txt.bold())
+
+// string.color
+print(txt.color(colorValue))
+
+// string.cspace
+print(txt.cspace("1em", true))
+
+// string.extract
+print(txt.extract("<b>", "</b>"))
+
+// string.format
+print(txt.format(["name","place"], "%s"))
+
+// string.indent
+print(txt.indent("15%", true))
+
+// string.italic
+print(txt.italic())
+
+// string.line_indent
+print(txt.line_indent("15%", true))
+
+// string.lowercase
+print(txt.lowercase())
+
+// string.margin
+print(txt.margin("5em"))
+
+// string.mark
+print(txt.mark("#FFFF00BF"))
+
+// string.mask
+print(txt.mask(true, char(42), null))
+
+// string.mspace
+print(txt.mspace("2.75em"))
+
+// string.nobr
+print(txt.nobr())
+
+// string.noparse
+print(txt.noparse())
+
+// string.page
+print(txt.page())
+
+// string.pos
+print(txt.pos("50%"))
+
+// string.remove_bold
+print(txt.remove_bold())
+
+// string.remove_char_first
+print(txt.remove_char_first())
+
+// string.remove_char_last
+print(txt.remove_char_last())
+
+// string.remove_italic
+print(txt.remove_italic())
+
+// string.remove_mark
+print(txt.remove_mark())
+
+// string.remove_strike
+print(txt.remove_strike())
+
+// string.remove_sub
+print(txt.remove_sub())
+
+// string.remove_sup
+print(txt.remove_sup())
+
+// string.remove_underline
+print(txt.remove_underline())
+
+// string.rotate
+print(txt.rotate("45"))
+
+// string.size
+print(txt.size("5em"))
+
+// string.strike
+print(txt.strike())
+
+// string.sub
+print(txt.sub())
+
+// string.sup
+print(txt.sup())
+
+// string.underline
+print(txt.underline())
+
+// string.uppercase
+print(txt.uppercase())
+
+// string.voffset
+print(txt.voffset("1em"))
+
+// string.width
+print(txt.width("50%"))
+

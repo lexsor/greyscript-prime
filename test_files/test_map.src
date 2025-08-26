@@ -1,0 +1,33 @@
+// ====================================================================
+// GreyScript Snippets Smoke Test — MAP
+// Auto-generated from maps_define.json + maps_call.json
+// Save as test_map.src or .gs in VS Code to verify snippets.
+// ====================================================================
+
+// ---------- DEFINITIONS: MAP ----------
+
+map.get_attributes = function()
+	locals.attributeList = []
+	for param in self["__isa"]
+		locals.attributeList.push(locals.param.key)
+	end for	
+	return locals.attributeList
+end function
+
+map.push_once = function(mapItem)
+	if not self.hasIndex(self.indexOf(mapItem)) then
+		self.push(targetIP)
+	end if	
+end function
+
+
+// ---------- CALLS: MAP ----------
+// NOTE: Some map.* helpers expect router/port types.
+mp = {}  // placeholder object; replace with a router if executing
+
+// map.get_attributes
+print(mp.get_attributes())
+
+// map.push_once
+print(mp.push_once(mapItem))
+

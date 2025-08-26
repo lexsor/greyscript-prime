@@ -1,0 +1,42 @@
+// ====================================================================
+// GreyScript Snippets Smoke Test — LIST
+// Auto-generated from lists_define.json + lists_call.json
+// Save as test_list.src or .gs in VS Code to verify snippets.
+// ====================================================================
+
+// ---------- DEFINITIONS: LIST ----------
+
+list.crop = function()
+        while not self[self.len - 1].len > 0
+            self.remove(self.len - 1)
+        end while
+        while not self[0].len > 0
+            self.remove(0)
+        end while
+        return self
+    end function
+
+list.push_once = function(listItem)
+	if not self.hasIndex(self.indexOf(locals.listItem)) then
+		self.push(locals.listItem)
+	end if	
+end function
+
+list.string = function(seperator = char(10))
+    locals.printString = split(self, locals.seperator)
+    return locals.printString
+end function
+
+
+// ---------- CALLS: LIST ----------
+lst = ["a", "b", "a", "", "c"]
+
+// list.crop
+print(lst.crop())
+
+// list.push_once
+print(lst.push_once(listItem))
+
+// list.string
+print(lst.string(char(10)))
+

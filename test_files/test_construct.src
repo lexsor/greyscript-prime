@@ -1,0 +1,115 @@
+// ====================================================================
+// GreyScript Snippets Smoke Test — CONSTRUCT
+// Auto-generated from construct_define.json + construct_call.json
+// Save as test_construct.src or .gs in VS Code to verify snippets.
+// ====================================================================
+
+// ---------- DEFINITIONS: CONSTRUCT ----------
+
+construct.fetch_whois = function(routerPublicIPAddress)
+	if not is_lan_ip(locals.routerPublicIPAddress) == true then
+		if is_valid_ip(routerPublicIPAddress) then
+			locals.whoisInfo = {"classID":"whoisInfo", "admin":"", "domain":"", "email":"", "network":"", "phone":"", "error":null}
+			locals.what = split(whois(locals.routerPublicIPAddress), "\n")
+			locals.whoisInfo.domain = str(split(locals.what[0], ":")[1]).trim
+			locals.whoisInfo.admin = str(split(locals.what[1], ":")[1]).trim
+			locals.whoisInfo.email = str(split(locals.what[2], ":")[1]).trim
+			locals.whoisInfo.phone = str(split(locals.what[3], ":")[1]).trim
+			if locals.what.len >= 5 then
+				locals.whoisInfo.network = str(split(locals.what[4], ":")[0]).trim
+			else
+				locals.whoisInfo.network = "[ UNKNOWN ]"
+			end if
+		else 
+			locals.whoisInfo = {"classID":"whoisInfo", "error":"Invalid Public IP Address Provided."}	
+		end if
+	else
+		locals.whoisInfo = {"classID":"whoisInfo", "error":"Needs Public IP, Provided Local IP."}
+	end if
+	locals.whoisInfo.error = false
+	return locals.whoisInfo
+end function
+
+construct.file_location_ident = function(absoluteLocation)
+        locals.ext = slice(locals.absoluteLocation, (locals.absoluteLocation.lastIndexOf(".") + 1), locals.absoluteLocation.len)
+        locals.name = slice(locals.absoluteLocation, locals.absoluteLocation.lastIndexOf("/") + 1, locals.absoluteLocation.lastIndexOf("."))
+		locals.filename = locals.name + "." + locals.ext
+        locals.dir = slice(locals.absoluteLocation, locals.absoluteLocation.indexOf("/"), locals.absoluteLocation.lastIndexOf("/"))
+        locals.folder = slice(locals.dir, locals.dir.lastIndexOf("/") + 1)
+        locals.location = locals.dir + "/" + locals.name + "." + locals.ext
+        locals.construct = {"classID":"fileID", "ext": locals.ext, "name": locals.name, "parentdir": locals.folder, "dir": locals.dir, "location": locals.location, "filename": locals.filename}
+        return locals.construct
+end function
+
+construct.id_self = function()
+	locals.localRouter = get_router
+        if not typeof(locals.localRouter) == "router" then return "Failed to fetch local router object."
+	locals.localComputer = get_shell.host_computer
+        if not typeof(locals.localComputer) == "computer" then return "Failed to fetch local computer object."
+	locals.ipInformation = {"classID": "ipInformation", "local": locals.localComputer.local_ip, "public": locals.localComputer.public_ip, "gateway":locals.localComputer.network_gateway}
+	locals.ipScan = locals.ipInformation
+	locals.ComputerInformation = {"classID": "computerInformation","name":locals.localComputer.get_name, "home":home_dir, "location":program_path, "path":current_path, "user":active_user, "has_internet":locals.localComputer.is_network_active}
+	locals.computerInfo = locals.ComputerInformation
+	locals.currentStatus = {"classID":"currentStatus", "ipInfo":locals.ipScan, "compInfo":locals.computerInfo}
+	locals.currentStatus.classID = "currentStatus"
+	return locals.currentStatus
+end function
+
+construct.fetch_exploit_requirements = function(targetAddress, metaLibObject, metaxploitObject)
+    locals.metax = locals.metaxploitObject
+    locals.metaLib = locals.metaLibObject
+    locals.allExploitData = []
+    locals.scanResults = locals.metax.scan_address(locals.metaLib, targetAddress)
+    locals.unsafeCheckLists = (unsafe_check_list(locals.scanResults)).crop
+    for unsafeCheck in locals.unsafeCheckLists
+            locals.exploits = {"classID": "exploitRequirments", "version":version, "address": targetAddress, "variable": locals.unsafeCheck.extract, "cra": false, "cga": false, "cua": false, "rur": 0, "rpf": 0}
+            if not locals.unsafeCheck.indexOf("Checking root active") then
+                locals.exploits.cra = false
+            else
+                locals.exploits.cra = true
+            end if
+            if not locals.unsafeCheck.indexOf("Checking an active user") then
+                locals.exploits.cua = false
+            else
+                locals.exploits.cua = true
+            end if
+            if not locals.unsafeCheck.indexOf("Checking guest active") then
+                locals.exploits.cga = false
+            else
+                locals.exploits.cga = true
+            end if
+                locals.unsafeCheckItems = split(locals.unsafeCheck, char(10))
+                locals.unsafeCheckHeader = locals.unsafeCheckItems[0]
+                for unsafeItem in locals.unsafeCheckItems
+                    if not locals.unsafeItem.indexOf("to ", ".") == null then
+                        if not locals.unsafeItem.indexOf("registered users") == null then
+                            locals.exploits.rur = to_int((locals.unsafeItem.extract("to ", ".")).remove_char_last)
+                        end if  
+                        if not locals.unsafeItem.indexOf("port forwarding") == null then
+                            locals.portForwards = locals.unsafeItem.remove(" port forwarding configured from router to the target computer.")
+                            locals.exploits.rpf = to_int(((locals.unsafeItem.remove(" port forwarding configured from router to the target computer.")).remove("* ")))
+                        end if						
+                    end if
+                end for
+            locals.exploits.version = locals.metaLib.version
+            locals.allExploitData.push(locals.exploits)
+        end for
+    return locals.allExploitData
+end function
+
+
+// ---------- CALLS: CONSTRUCT ----------
+obj = {}  // placeholder
+
+// construct.fetch_exploit_requirements
+print(obj.fetch_exploit_requirements(targetAddress, metaLibObject, metaxploitObject))
+
+// construct.fetch_whois
+print(obj.fetch_whois(routerPublicIPAddress))
+
+// construct.file_location_ident
+print(obj.file_location_ident(absoluteLocation))
+
+// construct.id_self
+print(obj.id_self())
+
