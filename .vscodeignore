@@ -1,0 +1,11 @@
+.vscode/**
+.git/**
+**/*.src
+**/*.gs
+test_*.* 
+*.log
+**/__tests__/**
+node_modules/**
+Archive/**
+.gitignore
+.gitattibutes
