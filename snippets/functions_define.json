@@ -1,0 +1,459 @@
+{
+  "_comment_file_new": "======================== file_new ========================",
+  "file_new (define)": {
+    "prefix": "file_new",
+    "body": [
+      "\tfile_new = function(filePath, fileName)",
+      "\t\tlocals.hostComputer = get_shell.host_computer",
+      "\t\tlocals.fileLocation = locals.filePath + \"/\" + locals.fileName",
+      "\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tif not locals.fileObj then",
+      "\t\t\tlocals.hostComputer.touch(locals.filePath, locals.fileName)",
+      "\t\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tend if",
+      "\t\tif locals.fileObj then",
+      "\t\t\treturn true",
+      "\t\telse",
+      "\t\t\treturn false",
+      "\t\tend if",
+      "\tend function"
+    ],
+    "description": "Define file_new(filePath, fileName)"
+  },
+  "_comment_force_params": "======================== force_params ========================",
+  "force_params (define)": {
+    "prefix": "force_params",
+    "body": [
+      "\tforce_params = function(usage, minReqParams)",
+      "\t\tif globals.params.len < 1 then exit locals.usage",
+      "\t\tif globals.params[0] == \"-h\" or globals.params[0] == \"--help\" then exit locals.usage",
+      "\t\tif globals.params.len < locals.minReqParams then exit locals.usage",
+      "\tend function"
+    ],
+    "description": "Define force_params(usage, minReqParams)"
+  },
+  "_comment_get_acks": "======================== get_acks ========================",
+  "get_acks (define)": {
+    "prefix": "get_acks",
+    "body": [
+      "\tget_acks = function(signalStrength = 1)",
+      "\t\tif not typeof(locals.signalStrength) == \"number\" then",
+      "\t\t\tlocals.removePercent = locals.signalStrength.remove(\"%\") //check for % in number string",
+      "\t\t\tlocals.newNumber = typeof(to_int(locals.removePercent))",
+      "\t\t\tif not locals.newNumber == \"number\" then return null ",
+      "\t\t\tif locals.newNumber < 0 then return null",
+      "\t\t\tif locals.newNumber > 100 then return null",
+      "\t\t\tlocals.signalStrength = locals.newNumber",
+      "\t\tend if",
+      "\t\tif locals.signalStrength <= 0 or locals.signalStrength > 100 then return null",
+      "\t\treturn ceil(300000 / (locals.signalStrength + 15))",
+      "\tend function"
+    ],
+    "description": "Define get_acks(signalStrength = 1)"
+  },
+  "_comment_get_exploit_address_list": "======================== get_exploit_address_list ========================",
+  "get_exploit_address_list (define)": {
+    "prefix": "get_exploit_address_list",
+    "body": [
+      "get_exploit_address_list = function(libLocation, metaxploitObject, remoteTarget = false, targetPort = 0)",
+      "    locals.metax = locals.metaxploitObject",
+      "\t\tif locals.remoteTarget == false then",
+      "        \tlocals.metaLib = locals.metax.load(locals.libLocation)",
+      "\t\telse",
+      "\t\t\tlocals.netSession = locals.metax.net_use(locals.libLocation, locals.targetPort)",
+      "\t\t\tlocals.metaLib = locals.netSession.dump_lib",
+      "\t\tend if",
+      "\t\tlocals.libScanResult = locals.metax.scan(locals.metaLib)",
+      "        return locals.libScanResult",
+      "end function"
+    ],
+    "description": "Define get_exploit_address_list(libLocation, metaxploitObject, remoteTarget = false, targetPort = 0)"
+  },
+  "_comment_bool_text": "======================== bool_text ========================",
+  "bool_text (define)": {
+    "prefix": "bool_text",
+    "body": [
+      "bool_text = function(boolVal, text = [\"true\", \"false\"])",
+      "        locals.boolText = {\"yes\":\"false\", \"no\":\"false\"}",
+      "        if locals.boolVal < 0 then return locals.boolText.no",
+      "        if locals.boolVal > 1 then return locals.boolText.yes",
+      "        if locals.boolVal == 1 then return locals.boolText.yes",
+      "        if locals.boolVal == 0 then return locals.boolText.no",
+      "    return null",
+      "end function"
+    ],
+    "description": "Define bool_text(boolVal, text = [\"true\", \"false\"])"
+  },
+  "_comment_display_menu": "======================== display_menu ========================",
+  "display_menu (define)": {
+    "prefix": "display_menu",
+    "body": [
+      "display_menu = function(menuList, selectedItem, highlightcolor = \"#FFFF002C\", textColor = null)",
+      "    locals.outputMenu = []",
+      "    for menuItem in locals.menuList",
+      "        if locals.selectedItem == __menuItem_idx then",
+      "            if locals.textColor == null then",
+      "                locals.outputMenu.push(locals.menuItem.mark(locals.highlightcolor))",
+      "            else",
+      "                locals.outputMenu.push(locals.menuItem.color(locals.textColor).mark(locals.highlightcolor))",
+      "            end if",
+      "        else",
+      "            locals.outputMenu.push(locals.menuItem)",
+      "        end if",
+      "    end for",
+      "    return locals.outputMenu",
+      "end function",
+      ""
+    ],
+    "description": "Define display_menu(menuList, selectedItem, highlightcolor = \"#FFFF002C\", textColor = null)"
+  },
+  "_comment_user_navigation": "======================== user_navigation ========================",
+  "user_navigation (define)": {
+    "prefix": "user_navigation",
+    "body": [
+      "",
+      "user_navigation = function (numberIndex, userInput)",
+      "    indexChange = numberIndex",
+      "    if locals.userInput == \"UpArrow\" then",
+      "        locals.indexChange = locals.indexChange - 1",
+      "    end if",
+      "    if locals.userInput == \"DownArrow\" then",
+      "        locals.indexChange = locals.indexChange + 1",
+      "    end if",
+      "    return locals.indexChange",
+      "end function",
+      ""
+    ],
+    "description": "Define user_navigation(numberIndex, userInput)"
+  },
+  "_comment_extractIP": "======================== extractIP ========================",
+  "extractIP (define)": {
+    "prefix": "extractIP",
+    "body": [
+      "extractIP = function(inputString)",
+      "    locals.ipPattern = \"\\b(?:(?:25[0-5]|2[0-4]\\\\d|1\\\\d\\\\d|[1-9]?\\\\d)\\\\.){3}(?:25[0-5]|2[0-4]\\\\d|1\\\\d\\\\d|[1-9]?\\\\d)\\b\"",
+      "    locals.matchResult = inputString.matches(locals.ipPattern)",
+      "    if locals.matchResult.values.len > 0 then",
+      "        return locals.matchResult.values[0]",
+      "    else",
+      "        return null",
+      "    end if",
+      "end function"
+    ],
+    "description": "Define extractIP(inputString)"
+  },
+  "_comment_file_append": "======================== file_append ========================",
+  "file_append (define)": {
+    "prefix": "file_append",
+    "body": [
+      "\tfile_append = function(savePath, saveFile, newText)",
+      "\t\t//********************************************",
+      "\t\tlocals.fileContent = \"\"",
+      "\t\tlocals.fileLocation = locals.savePath + \"/\" + locals.saveFile",
+      "\t\t//********************************************\t",
+      "\t\tlocals.hostComputer = get_shell.host_computer",
+      "\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tif not locals.fileObj then",
+      "\t\t\tlocals.hostComputer.touch(locals.savePath, locals.saveFile)",
+      "\t\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tend if",
+      "\t\t//********************************************",
+      "\t\t//********************************************\t\t",
+      "\t\tif locals.fileObj.has_permission(\"r\") then",
+      "\t\t\tif locals.fileObj.has_permission(\"w\") then",
+      "\t\t\t\tlocals.fileContent = locals.fileObj.get_content",
+      "\t\t\t\tif locals.fileContent == null then",
+      "\t\t\t\t\tlocals.fileObj.set_content(locals.newText)",
+      "\t\t\t\telse",
+      "\t\t\t\t\tlocals.fileObj.set_content(locals.fileContent + locals.newText)",
+      "\t\t\t\tend if",
+      "\t\t\telse",
+      "\t\t\tprint(\"Permission Error Saving Data to: \" + locals.saveFile + \" [No Write Permission]\")",
+      "\t\t\tend if",
+      "\t\telse",
+      "\t\t\tprint(\"Permission Error Saving Data to: \" + locals.saveFile + \" [No Read Permission]\")",
+      "\t\tend if",
+      "\tend function"
+    ],
+    "description": "Define file_append(savePath, saveFile, newText)"
+  },
+  "_comment_file_delete": "======================== file_delete ========================",
+  "file_delete (define)": {
+    "prefix": "file_delete",
+    "body": [
+      "\tfile_delete = function(filePath, fileName)",
+      "\t\tlocals.hostComputer = get_shell.host_computer",
+      "\t\tlocals.fileLocation = locals.filePath + \"/\" + locals.fileName",
+      "\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tif locals.fileObj.has_permission(\"w\") then",
+      "\t\t\tlocals.hostComputer.File.delete",
+      "\t\t\treturn true",
+      "\t\tend if",
+      "\t\treturn false",
+      "\tend function"
+    ],
+    "description": "Define file_delete(filePath, fileName)"
+  },
+  "_comment_file_exists": "======================== file_exists ========================",
+  "file_exists (define)": {
+    "prefix": "file_exists",
+    "body": [
+      "\tfile_exists = function(filePath, fileName)",
+      "\t\tlocals.hostComputer = get_shell.host_computer",
+      "\t\tlocals.fileLocation = locals.filePath + \"/\" + locals.fileName",
+      "\t\tlocals.fileObj = locals.hostComputer.File(locals.fileLocation)",
+      "\t\tif not locals.fileObj then",
+      "\t\t\treturn false",
+      "\t\telse",
+      "\t\t\treturn true",
+      "\t\tend if\t\t",
+      "\tend function"
+    ],
+    "description": "Define file_exists(filePath, fileName)"
+  },
+  "_comment_get_overflow_owner": "======================== get_overflow_owner ========================",
+  "get_overflow_owner (define)": {
+    "prefix": "get_overflow_owner",
+    "body": [
+      "get_overflow_owner = function(overflowObject)",
+      "    locals.overflowOwner = null",
+      "    locals.overflowObjectType = typeof(locals.overflowObject)",
+      "    if locals.overflowObjectType == \"file\" then",
+      "        return locals.overflowObject.owner",
+      "    end if",
+      "    if locals.overflowObjectType == \"shell\" or locals.overflowObjectType == \"computer\" then",
+      "        if locals.overflowObjectType == \"shell\" then locals.rootFolder = locals.overflowObject.host_computer.File(\"/root\")",
+      "        if overflowObjectType == \"computer\" then locals.rootFolder = locals.overflowObject.File(\"/root\")",
+      "        if not locals.rootFolder.has_permission(\"w\") == 0 then return \"root\"",
+      "        if locals.overflowObjectType == \"shell\" then locals.homeFolders = locals.overflowObject.host_computer.File(\"/home\").get_folders",
+      "        if locals.overflowObjectType == \"computer\" then locals.homeFolders = locals.overflowObject.File(\"/home\").get_folders",
+      "        for userFolder in locals.homeFolders",
+      "            if locals.userFolder.has_permission(\"w\") then",
+      "                locals.overflowOwner = locals.userFolder.name",
+      "                if not locals.overflowOwner == \"guest\" then return locals.userFolder.name",
+      "            end if",
+      "        end for",
+      "    end if",
+      "    return locals.overflowOwner           ",
+      "end function"
+    ],
+    "description": "Define get_overflow_owner(overflowObject)"
+  },
+  "_comment_get_random_ip": "======================== get_random_ip ========================",
+  "get_random_ip (define)": {
+    "prefix": "get_random_ip",
+    "body": [
+      "\tget_random_ip = function()",
+      "\tlocals.generateRandomOctet = function()",
+      "    \tlocals.binaryString = \"\"",
+      "\t    for i in range(8, 1)",
+      "\t        // Convert the random float to a binary digit using a threshold:",
+      "\t        if rnd() >= 0.5 then",
+      "\t            locals.binaryString = locals.binaryString + \"1\"",
+      "\t        else",
+      "\t            locals.binaryString = locals.binaryString + \"0\"",
+      "\t        end if",
+      "\t    end for",
+      "\t    return (0 + to_int(locals.binaryString[0])) * 128 +",
+      "\t           (0 + to_int(locals.binaryString[1])) * 64 +",
+      "\t           (0 + to_int(locals.binaryString[2])) * 32 +",
+      "\t           (0 + to_int(locals.binaryString[3])) * 16 +",
+      "\t           (0 + to_int(locals.binaryString[4])) * 8 +",
+      "    \t       (0 + to_int(locals.binaryString[5])) * 4 +",
+      "        \t   (0 + to_int(locals.binaryString[6])) * 2 +",
+      "\t           (0 + to_int(locals.binaryString[7]))",
+      "\tend function"
+    ],
+    "description": "Define get_random_ip()"
+  },
+  "_comment_get_subnet_non_routers": "======================== get_subnet_non_routers ========================",
+  "get_subnet_non_routers (define)": {
+    "prefix": "get_subnet_non_routers",
+    "body": [
+      "get_subnet_non_routers = function(address, returnNonRouters = true, returnRouters = false)",
+      "    locals.target_router = get_router(locals.address)",
+      "    if locals.target_router == null then",
+      "        return \"router not found.\" ",
+      "    end if",
+      "",
+      "    locals.devices = devices_lan_ip(locals.target_router)",
+      "    locals.subnet = []",
+      "",
+      "    for ip in locals.devices",
+      "    if locals.returnNonRouters == true then",
+      "        if get_router(locals.ip) == null then",
+      "            subnet.push(locals.ip)",
+      "        end if",
+      "    end if",
+      "    if locals.returnRouters == true then",
+      "        if typeof(get_router(locals.ip)) == \"router\" then",
+      "            subnet.push(locals.ip)",
+      "        end if",
+      "    end if    ",
+      "    end for",
+      "    return locals.subnet",
+      "end function"
+    ],
+    "description": "Define get_subnet_non_routers(address, returnNonRouters = true, returnRouters = false)"
+  },
+  "_comment_is_null": "======================== is_null ========================",
+  "is_null (define)": {
+    "prefix": "is_null",
+    "body": [
+      "is_null = function(testObject)",
+      "    if locals.testObject == null then",
+      "        return true",
+      "    else",
+      "        return false",
+      "    end if",
+      "end function"
+    ],
+    "description": "Define is_null(testObject)"
+  },
+  "_comment_is_typeof": "======================== is_typeof ========================",
+  "is_typeof (define)": {
+    "prefix": "is_typeof",
+    "body": [
+      "\tis_typeof = function(testObject, objectType)",
+      "\t\t\tif not typeof(locals.testObject) == locals.objectType then return false",
+      "\t\t\treturn true",
+      "\tend function"
+    ],
+    "description": "Define is_typeof(testObject, objectType)"
+  },
+  "_comment_kill_procs": "======================== kill_procs ========================",
+  "kill_procs (define)": {
+    "prefix": "kill_procs",
+    "body": [
+      "kill_procs = function(computerObject = get_shell.host_computer, pid = null, killRoot = false)",
+      "termItem = function(termProc)",
+      "\tcomputerObject.close_program(locals.termProc)\t\t\t\t\t\t\t",
+      "end function"
+    ],
+    "description": "Define kill_procs(computerObject = get_shell.host_computer, pid = null, killRoot = false)"
+  },
+  "_comment_termItem": "======================== termItem ========================",
+  "termItem (define)": {
+    "prefix": "termItem",
+    "body": [
+      "termItem = function(termProc)",
+      "\tcomputerObject.close_program(locals.termProc)\t\t\t\t\t\t\t",
+      "end function"
+    ],
+    "description": "Define termItem(termProc)"
+  },
+  "_comment_load_lib": "======================== load_lib ========================",
+  "load_lib (define)": {
+    "prefix": "load_lib",
+    "body": [
+      "load_lib = function(libName = \"metaxploit.so\", libDir = \"/lib\", libType = \"\")",
+      "    locals.libLocation = locals.libDir + \"/\" + locals.libName",
+      "    if locals.libName == \"\" then",
+      "        return null",
+      "    end if",
+      "    locals.lib = include_lib(locals.libLocation)",
+      "        if not typeof(locals.lib) == null then",
+      "            if locals.libType == \"\" then",
+      "                return locals.lib",
+      "            else if typeof(locals.lib) == locals.libType then",
+      "                return locals.lib",
+      "\t\t\telse",
+      "\t\t\t\treturn null",
+      "            end if",
+      "        else",
+      "            return null",
+      "        end if",
+      "end function",
+      "",
+      ""
+    ],
+    "description": "Define load_lib(libName = \"metaxploit.so\", libDir = \"/lib\", libType = \"\")"
+  },
+  "_comment_network_device_list": "======================== network_device_list ========================",
+  "network_device_list (define)": {
+    "prefix": "network_device_list",
+    "body": [
+      "\tnetwork_device_list = function(user = \"\", pass = \"\")",
+      "\t\tlocals.networkDevices = split(get_shell(locals.user, locals.pass).host_computer.network_devices, char(10))",
+      "\t\tlocals.networkDeviceList = []",
+      "\t\tfor device in locals.networkDevices",
+      "\t\t\tif locals.device then locals.networkDeviceList.push(split(locals.device, \" \"))",
+      "\t\tend for",
+      "\t\treturn locals.networkDeviceList",
+      "\tend function"
+    ],
+    "description": "Define network_device_list(user = \"\", pass = \"\")"
+  },
+  "_comment_parse_inbox": "======================== parse_inbox ========================",
+  "parse_inbox (define)": {
+    "prefix": "parse_inbox",
+    "body": [
+      "parse_inbox = function(mailIDList)",
+      "\t\tlocals.mailObjects = []",
+      "\t\tlocals.bodyText = \"\"",
+      "        for mailList in locals.mailIDList",
+      "\t\t\tlocals.mail = new{\"id\":\"\", \"from\":\"\", \"subject\":\"\", \"summary\":\"\", \"body\":\"\"}",
+      "\t\t\tlocals.rawMail = globals.metaMail.read(locals.mailList)",
+      "\t\t\tlocals.segments = (locals.rawMail.split(char(10))).crop",
+      "            locals.mail.from = locals.segments[0][6:]",
+      "            locals.mail.subject = locals.segments[1][9:]",
+      "            locals.segments.remove(0) // remove from",
+      "            locals.segments.remove(0) // remove subject",
+      "\t\t\tlocals.mail.id = locals.mailList",
+      "            locals.mail.body = locals.segments.string ",
+      "\t\t\tlocals.mailObjects.push(locals.mail)",
+      "        end for",
+      "        return locals.mailObjects",
+      "    end function"
+    ],
+    "description": "Define parse_inbox(mailIDList)"
+  },
+  "_comment_get_inbox": "======================== get_inbox ========================",
+  "get_inbox (define)": {
+    "prefix": "get_inbox",
+    "body": [
+      "    get_inbox = function(mailAddress = user_mail_address, mailPass = null)",
+      "        if mailPass == null then return null",
+      "        locals.metaMail = mail_login(locals.mailAddress, locals.mailPass)",
+      "\t\treturn metaMail.fetch",
+      "    end function"
+    ],
+    "description": "Define get_inbox(mailAddress = user_mail_address, mailPass = null)"
+  },
+  "_comment_stack_string": "======================== stack_string ========================",
+  "stack_string (define)": {
+    "prefix": "stack_string",
+    "body": [
+      "stack_string = function(stackStringTop, stackStringBottom, stackPosition = \"0em\")",
+      "      string.pos = function(position = \"0em\")",
+      "          return \"<pos=\" + position + \">\" + self + \"</pos>\"",
+      "      end function"
+    ],
+    "description": "Define stack_string(stackStringTop, stackStringBottom, stackPosition = \"0em\")"
+  },
+  "_comment_unsafe_check_list": "======================== unsafe_check_list ========================",
+  "unsafe_check_list (define)": {
+    "prefix": "unsafe_check_list",
+    "body": [
+      "\tunsafe_check_list = function(scanResults)",
+      "\t\tlocals.scanResults = locals.scanResults.remove(\"decompiling source...\" + char(10) + \"searching unsecure values...\" + char(10))",
+      "\t\tlocals.unsafeCheckList = locals.scanResults.split(char(10)*2)",
+      "\t\treturn locals.unsafeCheckList",
+      "\tend function",
+      ""
+    ],
+    "description": "Define unsafe_check_list(scanResults)"
+  },
+  "_comment_program_name": "======================== program_name ========================",
+  "program_name (define)": {
+    "prefix": "program_name",
+    "body": [
+      "\tprogram_name = function()",
+      "\t\tlocals.splitVal = program_path.split(\"/\")",
+      "\t\tlocals.splitVal.reverse",
+      "\t\treturn trim(locals.splitVal[0])",
+      "\tend function"
+    ],
+    "description": "Define program_name()"
+  }
+}

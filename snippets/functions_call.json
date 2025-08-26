@@ -1,0 +1,202 @@
+{
+  "_comment_file_new": "======================== file_new ========================",
+  "file_new (call)": {
+    "prefix": "file_new",
+    "body": [
+      "file_new(${1:filePath}, ${2:fileName})$0"
+    ],
+    "description": "Call file_new(filePath, fileName)"
+  },
+  "_comment_force_params": "======================== force_params ========================",
+  "force_params (call)": {
+    "prefix": "force_params",
+    "body": [
+      "force_params(${1:usage}, ${2:minReqParams})$0"
+    ],
+    "description": "Call force_params(usage, minReqParams)"
+  },
+  "_comment_get_acks": "======================== get_acks ========================",
+  "get_acks (call)": {
+    "prefix": "get_acks",
+    "body": [
+      "get_acks(${1:1})$0"
+    ],
+    "description": "Call get_acks(signalStrength)"
+  },
+  "_comment_get_exploit_address_list": "======================== get_exploit_address_list ========================",
+  "get_exploit_address_list (call)": {
+    "prefix": "get_exploit_address_list",
+    "body": [
+      "get_exploit_address_list(${1:libLocation}, ${2:metaxploitObject}, ${3:false}, ${4:0})$0"
+    ],
+    "description": "Call get_exploit_address_list(libLocation, metaxploitObject, remoteTarget, targetPort)"
+  },
+  "_comment_bool_text": "======================== bool_text ========================",
+  "bool_text (call)": {
+    "prefix": "bool_text",
+    "body": [
+      "bool_text(${1:boolVal}, ${2:[\"true\"}, ${3:\"false\"]})$0"
+    ],
+    "description": "Call bool_text(boolVal, text, \"false\"])"
+  },
+  "_comment_display_menu": "======================== display_menu ========================",
+  "display_menu (call)": {
+    "prefix": "display_menu",
+    "body": [
+      "display_menu(${1:menuList}, ${2:selectedItem}, ${3:\"#FFFF002C\"}, ${4:null})$0"
+    ],
+    "description": "Call display_menu(menuList, selectedItem, highlightcolor, textColor)"
+  },
+  "_comment_user_navigation": "======================== user_navigation ========================",
+  "user_navigation (call)": {
+    "prefix": "user_navigation",
+    "body": [
+      "user_navigation(${1:numberIndex}, ${2:userInput})$0"
+    ],
+    "description": "Call user_navigation(numberIndex, userInput)"
+  },
+  "_comment_extractIP": "======================== extractIP ========================",
+  "extractIP (call)": {
+    "prefix": "extractIP",
+    "body": [
+      "extractIP(${1:inputString})$0"
+    ],
+    "description": "Call extractIP(inputString)"
+  },
+  "_comment_file_append": "======================== file_append ========================",
+  "file_append (call)": {
+    "prefix": "file_append",
+    "body": [
+      "file_append(${1:savePath}, ${2:saveFile}, ${3:newText})$0"
+    ],
+    "description": "Call file_append(savePath, saveFile, newText)"
+  },
+  "_comment_file_delete": "======================== file_delete ========================",
+  "file_delete (call)": {
+    "prefix": "file_delete",
+    "body": [
+      "file_delete(${1:filePath}, ${2:fileName})$0"
+    ],
+    "description": "Call file_delete(filePath, fileName)"
+  },
+  "_comment_file_exists": "======================== file_exists ========================",
+  "file_exists (call)": {
+    "prefix": "file_exists",
+    "body": [
+      "file_exists(${1:filePath}, ${2:fileName})$0"
+    ],
+    "description": "Call file_exists(filePath, fileName)"
+  },
+  "_comment_get_overflow_owner": "======================== get_overflow_owner ========================",
+  "get_overflow_owner (call)": {
+    "prefix": "get_overflow_owner",
+    "body": [
+      "get_overflow_owner(${1:overflowObject})$0"
+    ],
+    "description": "Call get_overflow_owner(overflowObject)"
+  },
+  "_comment_get_random_ip": "======================== get_random_ip ========================",
+  "get_random_ip (call)": {
+    "prefix": "get_random_ip",
+    "body": [
+      "get_random_ip()$0"
+    ],
+    "description": "Call get_random_ip()"
+  },
+  "_comment_get_subnet_non_routers": "======================== get_subnet_non_routers ========================",
+  "get_subnet_non_routers (call)": {
+    "prefix": "get_subnet_non_routers",
+    "body": [
+      "get_subnet_non_routers(${1:address}, ${2:true}, ${3:false})$0"
+    ],
+    "description": "Call get_subnet_non_routers(address, returnNonRouters, returnRouters)"
+  },
+  "_comment_is_null": "======================== is_null ========================",
+  "is_null (call)": {
+    "prefix": "is_null",
+    "body": [
+      "is_null(${1:testObject})$0"
+    ],
+    "description": "Call is_null(testObject)"
+  },
+  "_comment_is_typeof": "======================== is_typeof ========================",
+  "is_typeof (call)": {
+    "prefix": "is_typeof",
+    "body": [
+      "is_typeof(${1:testObject}, ${2:objectType})$0"
+    ],
+    "description": "Call is_typeof(testObject, objectType)"
+  },
+  "_comment_kill_procs": "======================== kill_procs ========================",
+  "kill_procs (call)": {
+    "prefix": "kill_procs",
+    "body": [
+      "kill_procs(${1:get_shell.host_computer}, ${2:null}, ${3:false})$0"
+    ],
+    "description": "Call kill_procs(computerObject, pid, killRoot)"
+  },
+  "_comment_termItem": "======================== termItem ========================",
+  "termItem (call)": {
+    "prefix": "termItem",
+    "body": [
+      "termItem(${1:termProc})$0"
+    ],
+    "description": "Call termItem(termProc)"
+  },
+  "_comment_load_lib": "======================== load_lib ========================",
+  "load_lib (call)": {
+    "prefix": "load_lib",
+    "body": [
+      "load_lib(${1:\"metaxploit.so\"}, ${2:\"/lib\"}, ${3:\"\"})$0"
+    ],
+    "description": "Call load_lib(libName, libDir, libType)"
+  },
+  "_comment_network_device_list": "======================== network_device_list ========================",
+  "network_device_list (call)": {
+    "prefix": "network_device_list",
+    "body": [
+      "network_device_list(${1:\"\"}, ${2:\"\"})$0"
+    ],
+    "description": "Call network_device_list(user, pass)"
+  },
+  "_comment_parse_inbox": "======================== parse_inbox ========================",
+  "parse_inbox (call)": {
+    "prefix": "parse_inbox",
+    "body": [
+      "parse_inbox(${1:mailIDList})$0"
+    ],
+    "description": "Call parse_inbox(mailIDList)"
+  },
+  "_comment_get_inbox": "======================== get_inbox ========================",
+  "get_inbox (call)": {
+    "prefix": "get_inbox",
+    "body": [
+      "get_inbox(${1:user_mail_address}, ${2:null})$0"
+    ],
+    "description": "Call get_inbox(mailAddress, mailPass)"
+  },
+  "_comment_stack_string": "======================== stack_string ========================",
+  "stack_string (call)": {
+    "prefix": "stack_string",
+    "body": [
+      "stack_string(${1:stackStringTop}, ${2:stackStringBottom}, ${3:\"0em\"})$0"
+    ],
+    "description": "Call stack_string(stackStringTop, stackStringBottom, stackPosition)"
+  },
+  "_comment_unsafe_check_list": "======================== unsafe_check_list ========================",
+  "unsafe_check_list (call)": {
+    "prefix": "unsafe_check_list",
+    "body": [
+      "unsafe_check_list(${1:scanResults})$0"
+    ],
+    "description": "Call unsafe_check_list(scanResults)"
+  },
+  "_comment_program_name": "======================== program_name ========================",
+  "program_name (call)": {
+    "prefix": "program_name",
+    "body": [
+      "program_name()$0"
+    ],
+    "description": "Call program_name()"
+  }
+}
