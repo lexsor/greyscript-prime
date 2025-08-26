@@ -1,7 +1,10 @@
 {
   "_comment_list_crop": "======================== list.crop ========================",
   "list.crop (call)": {
-    "prefix": "crop",
+    "prefix": [
+      "crop",
+      ".crop"
+    ],
     "body": [
       "crop()$0"
     ],
@@ -9,7 +12,10 @@
   },
   "_comment_list_push_once": "======================== list.push_once ========================",
   "list.push_once (call)": {
-    "prefix": "push_once",
+    "prefix": [
+      "push_once",
+      ".push_once"
+    ],
     "body": [
       "push_once(${1:listItem})$0"
     ],
@@ -17,7 +23,10 @@
   },
   "_comment_list_string": "======================== list.string ========================",
   "list.string (call)": {
-    "prefix": "string",
+    "prefix": [
+      "string",
+      ".string"
+    ],
     "body": [
       "string(${1:char(10})$0"
     ],

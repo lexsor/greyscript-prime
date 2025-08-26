@@ -1,7 +1,10 @@
 {
   "_comment_number_is_less": "======================== number.is_less ========================",
   "number.is_less (call)": {
-    "prefix": "is_less",
+    "prefix": [
+      "is_less",
+      ".is_less"
+    ],
     "body": [
       "is_less(${1:is_less})$0"
     ],
@@ -9,7 +12,10 @@
   },
   "_comment_number_is_more": "======================== number.is_more ========================",
   "number.is_more (call)": {
-    "prefix": "is_more",
+    "prefix": [
+      "is_more",
+      ".is_more"
+    ],
     "body": [
       "is_more(${1:is_more})$0"
     ],
@@ -17,7 +23,10 @@
   },
   "_comment_number_is_negative": "======================== number.is_negative ========================",
   "number.is_negative (call)": {
-    "prefix": "is_negative",
+    "prefix": [
+      "is_negative",
+      ".is_negative"
+    ],
     "body": [
       "is_negative()$0"
     ],
@@ -25,7 +34,10 @@
   },
   "_comment_number_is_positive": "======================== number.is_positive ========================",
   "number.is_positive (call)": {
-    "prefix": "is_positive",
+    "prefix": [
+      "is_positive",
+      ".is_positive"
+    ],
     "body": [
       "is_positive()$0"
     ],
@@ -33,7 +45,10 @@
   },
   "_comment_number_is_zero": "======================== number.is_zero ========================",
   "number.is_zero (call)": {
-    "prefix": "is_zero",
+    "prefix": [
+      "is_zero",
+      ".is_zero"
+    ],
     "body": [
       "is_zero()$0"
     ],
@@ -41,7 +56,10 @@
   },
   "_comment_number_clamp": "======================== number.clamp ========================",
   "number.clamp (call)": {
-    "prefix": "clamp",
+    "prefix": [
+      "clamp",
+      ".clamp"
+    ],
     "body": [
       "clamp(${1:min}, ${2:max})$0"
     ],
@@ -49,7 +67,10 @@
   },
   "_comment_number_diff": "======================== number.diff ========================",
   "number.diff (call)": {
-    "prefix": "diff",
+    "prefix": [
+      "diff",
+      ".diff"
+    ],
     "body": [
       "diff(${1:0})$0"
     ],
@@ -57,7 +78,10 @@
   },
   "_comment_number_div": "======================== number.div ========================",
   "number.div (call)": {
-    "prefix": "div",
+    "prefix": [
+      "div",
+      ".div"
+    ],
     "body": [
       "div(${1:2})$0"
     ],
@@ -65,7 +89,10 @@
   },
   "_comment_number_is_float": "======================== number.is_float ========================",
   "number.is_float (call)": {
-    "prefix": "is_float",
+    "prefix": [
+      "is_float",
+      ".is_float"
+    ],
     "body": [
       "is_float()$0"
     ],
@@ -73,7 +100,10 @@
   },
   "_comment_number_is_integer": "======================== number.is_integer ========================",
   "number.is_integer (call)": {
-    "prefix": "is_integer",
+    "prefix": [
+      "is_integer",
+      ".is_integer"
+    ],
     "body": [
       "is_integer()$0"
     ],
@@ -81,7 +111,10 @@
   },
   "_comment_number_minus": "======================== number.minus ========================",
   "number.minus (call)": {
-    "prefix": "minus",
+    "prefix": [
+      "minus",
+      ".minus"
+    ],
     "body": [
       "minus(${1:1})$0"
     ],
@@ -89,7 +122,10 @@
   },
   "_comment_number_multiply": "======================== number.multiply ========================",
   "number.multiply (call)": {
-    "prefix": "multiply",
+    "prefix": [
+      "multiply",
+      ".multiply"
+    ],
     "body": [
       "multiply(${1:2})$0"
     ],
@@ -97,7 +133,10 @@
   },
   "_comment_number_plus": "======================== number.plus ========================",
   "number.plus (call)": {
-    "prefix": "plus",
+    "prefix": [
+      "plus",
+      ".plus"
+    ],
     "body": [
       "plus(${1:1})$0"
     ],
@@ -105,7 +144,10 @@
   },
   "_comment_number_random_from": "======================== number.random_from ========================",
   "number.random_from (call)": {
-    "prefix": "random_from",
+    "prefix": [
+      "random_from",
+      ".random_from"
+    ],
     "body": [
       "random_from(${1:0})$0"
     ],
@@ -113,7 +155,10 @@
   },
   "_comment_number_lerp": "======================== number.lerp ========================",
   "number.lerp (call)": {
-    "prefix": "lerp",
+    "prefix": [
+      "lerp",
+      ".lerp"
+    ],
     "body": [
       "lerp(${1:min}, ${2:max}, ${3:offset})$0"
     ],

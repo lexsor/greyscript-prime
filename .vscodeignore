@@ -9,3 +9,4 @@ node_modules/**
 Archive/**
 .gitignore
 .gitattibutes
+extension_instructions.md

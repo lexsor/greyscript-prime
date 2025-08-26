@@ -1,7 +1,10 @@
 {
   "_comment_construct_fetch_whois": "======================== construct.fetch_whois ========================",
   "construct.fetch_whois (call)": {
-    "prefix": "fetch_whois",
+    "prefix": [
+      "fetch_whois",
+      ".fetch_whois"
+    ],
     "body": [
       "fetch_whois(${1:routerPublicIPAddress})$0"
     ],
@@ -9,7 +12,10 @@
   },
   "_comment_construct_file_location_ident": "======================== construct.file_location_ident ========================",
   "construct.file_location_ident (call)": {
-    "prefix": "file_location_ident",
+    "prefix": [
+      "file_location_ident",
+      ".file_location_ident"
+    ],
     "body": [
       "file_location_ident(${1:absoluteLocation})$0"
     ],
@@ -17,7 +23,10 @@
   },
   "_comment_construct_id_self": "======================== construct.id_self ========================",
   "construct.id_self (call)": {
-    "prefix": "id_self",
+    "prefix": [
+      "id_self",
+      ".id_self"
+    ],
     "body": [
       "id_self()$0"
     ],
@@ -25,7 +34,10 @@
   },
   "_comment_construct_fetch_exploit_requirements": "======================== construct.fetch_exploit_requirements ========================",
   "construct.fetch_exploit_requirements (call)": {
-    "prefix": "fetch_exploit_requirements",
+    "prefix": [
+      "fetch_exploit_requirements",
+      ".fetch_exploit_requirements"
+    ],
     "body": [
       "fetch_exploit_requirements(${1:targetAddress}, ${2:metaLibObject}, ${3:metaxploitObject})$0"
     ],
