@@ -1,0 +1,14 @@
+{
+  "_comment_map_get_attributes": "======================== map.get_attributes ========================",
+  "map.get_attributes (call)": {
+    "prefix": "get_attributes",
+    "body": ["get_attributes()$0"],
+    "description": "Call .get_attributes() on a map"
+  },
+  "_comment_map_push_once": "======================== map.push_once ========================",
+  "map.push_once (call)": {
+    "prefix": "push_once",
+    "body": ["push_once(${1:mapItem})$0"],
+    "description": "Call .push_once(mapItem) on a map"
+  }
+}

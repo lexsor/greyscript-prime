@@ -1,0 +1,8 @@
+{
+    "_comment_map_get_port_info": "======================== map.get_port_info ========================",
+    "map.get_port_info (call)": {
+    "prefix": "get_port_info",
+    "body": ["get_port_info($1)$0"],
+    "description": "Call .get_port_info(portNumber) on a map (argument required placeholder)"
+  }
+}

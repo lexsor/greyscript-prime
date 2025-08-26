@@ -1,0 +1,26 @@
+{
+  "_comment_list_crop": "======================== list.crop ========================",
+  "list.crop (call)": {
+    "prefix": "crop",
+    "body": [
+      "crop()$0"
+    ],
+    "description": "Call .crop() on a list"
+  },
+  "_comment_list_push_once": "======================== list.push_once ========================",
+  "list.push_once (call)": {
+    "prefix": "push_once",
+    "body": [
+      "push_once(${1:listItem})$0"
+    ],
+    "description": "Call .push_once(listItem) on a list"
+  },
+  "_comment_list_string": "======================== list.string ========================",
+  "list.string (call)": {
+    "prefix": "string",
+    "body": [
+      "string(${1:char(10})$0"
+    ],
+    "description": "Call .string(seperator) on a list"
+  }
+}

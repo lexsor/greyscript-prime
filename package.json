@@ -1,0 +1,56 @@
+{
+  "name": "greyscript-prime",
+  "displayName": "GreyScript Prime",
+  "description": "Curated code snippets for GreyScript (Grey Hack).",
+  "publisher": "svarii",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages", 
+    "Snippets"
+  ],
+  "icon": "images/GreyScriptPrime.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Svarii/greyscript-prime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Svarii/greyscript-prime/issues"
+  },
+  "homepage": "https://github.com/Svarii/greyscript-prime",
+   "license": "MIT",
+  "keywords": [
+    "greyscript",
+    "grey script",
+    "grey hack",
+    "greyhack",
+    "snippets",
+    "scripting",
+    "game development",
+    "greyscript-snippets",
+    "greyscript-prime"
+  ],
+
+  "extensionDependencies": ["ayecue.greybel-vs"],
+
+  "contributes": {
+    "snippets": [
+      { "language": "greyscript", "path": "./snippets/strings_define.json" },
+      { "language": "greyscript", "path": "./snippets/strings_call.json" },
+      { "language": "greyscript", "path": "./snippets/lists_define.json" },
+      { "language": "greyscript", "path": "./snippets/lists_call.json" },
+      { "language": "greyscript", "path": "./snippets/maps_define.json" },
+      { "language": "greyscript", "path": "./snippets/maps_call.json" },
+      { "language": "greyscript", "path": "./snippets/enum_define.json" },
+      { "language": "greyscript", "path": "./snippets/enum_call.json" },
+      { "language": "greyscript", "path": "./snippets/router_define.json" },
+      { "language": "greyscript", "path": "./snippets/router_call.json" },
+      { "language": "greyscript", "path": "./snippets/construct_define.json" },
+      { "language": "greyscript", "path": "./snippets/construct_call.json" },
+      { "language": "greyscript", "path": "./snippets/numbers_define.json" },
+      { "language": "greyscript", "path": "./snippets/numbers_call.json" }
+    ]
+  }
+}

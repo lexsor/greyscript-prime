@@ -1,0 +1,15 @@
+{
+  "_comment_map_get_port_info": "======================== map.get_port_info ========================",
+  "map.get_port_info (define)": {
+    "prefix": "map.get_port_info",
+    "body": [
+      "map.get_port_info = function(portNumber)",
+      "\tif not typeof(self) == \"router\" then return \"<#FF0000>Type Mismatch, object is not a router\"",
+      "\tlocals.portObject = self.ping_port(locals.portNumber)",
+      "\tif not typeof(locals.portObject) == \"port\" then return \"<#FF0000>Type Mismatch, object is not a port\"",
+      "    return self.port_info(locals.portObject)",
+      "end function"
+    ],
+    "description": "Define map.get_port_info(portNumber): get port info for a router's port"
+  }
+}
