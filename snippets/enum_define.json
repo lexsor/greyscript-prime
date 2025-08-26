@@ -1,9 +1,9 @@
 {
-  "_comment_enum_string_construct__": "======================== enum.report_string_construct__ ========================",
-  "enum.report_string_construct__ (define)": {
-    "prefix": "enum.report_string_construct__",
+  "_comment_enum_string_construct__": "======================== report_string_construct__ ========================",
+  "report_string_construct__ (define)": {
+    "prefix": "report_string_construct__",
     "body": [
-      "enum.report_string_construct__ = function()",
+      "report_string_construct__ = function()",
       "\tlocals.fail = new {\"classID\": \"errorStrings\"}",
       "\tlocals.pass = new {\"classID\": \"passStrings\"}",
       "\tlocals.action = new {\"classID\": \"actionStrings\"}",
@@ -46,6 +46,6 @@
       "\treturn locals.status",
       "end function"
     ],
-    "description": "Define enum.report_string_construct__()"
+    "description": "Define report_string_construct__()"
   }
 }

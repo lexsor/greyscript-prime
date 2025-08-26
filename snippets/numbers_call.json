@@ -1,238 +1,238 @@
 {
-  "_comment_number_is_less": "======================== number.is_less ========================",
-  "number.is_less (call)": {
+  "_comment_is_less": "======================== .is_less ========================",
+  ".is_less (call)": {
     "prefix": "is_less",
     "body": [
       "is_less(${1:is_less})$0"
     ],
     "description": "Call .is_less(is_less) on a number"
   },
-  "_comment_number_is_more": "======================== number.is_more ========================",
-  "number.is_more (call)": {
+  "_comment_is_more": "======================== .is_more ========================",
+  ".is_more (call)": {
     "prefix": "is_more",
     "body": [
       "is_more(${1:is_more})$0"
     ],
     "description": "Call .is_more(is_more) on a number"
   },
-  "_comment_number_is_negative": "======================== number.is_negative ========================",
-  "number.is_negative (call)": {
+  "_comment_is_negative": "======================== .is_negative ========================",
+  ".is_negative (call)": {
     "prefix": "is_negative",
     "body": [
       "is_negative()$0"
     ],
     "description": "Call .is_negative() on a number"
   },
-  "_comment_number_is_positive": "======================== number.is_positive ========================",
-  "number.is_positive (call)": {
+  "_comment_is_positive": "======================== .is_positive ========================",
+  ".is_positive (call)": {
     "prefix": "is_positive",
     "body": [
       "is_positive()$0"
     ],
     "description": "Call .is_positive() on a number"
   },
-  "_comment_number_is_zero": "======================== number.is_zero ========================",
-  "number.is_zero (call)": {
+  "_comment_is_zero": "======================== .is_zero ========================",
+  ".is_zero (call)": {
     "prefix": "is_zero",
     "body": [
       "is_zero()$0"
     ],
     "description": "Call .is_zero() on a number"
   },
-  "_comment_number_clamp": "======================== number.clamp ========================",
-  "number.clamp (call)": {
+  "_comment_clamp": "======================== .clamp ========================",
+  ".clamp (call)": {
     "prefix": "clamp",
     "body": [
       "clamp(${1:min}, ${2:max})$0"
     ],
     "description": "Call .clamp(min, max) on a number"
   },
-  "_comment_number_diff": "======================== number.diff ========================",
-  "number.diff (call)": {
+  "_comment_diff": "======================== .diff ========================",
+  ".diff (call)": {
     "prefix": "diff",
     "body": [
       "diff(${1:0})$0"
     ],
     "description": "Call .diff(distanceTo) on a number"
   },
-  "_comment_number_div": "======================== number.div ========================",
-  "number.div (call)": {
+  "_comment_div": "======================== .div ========================",
+  ".div (call)": {
     "prefix": "div",
     "body": [
       "div(${1:2})$0"
     ],
     "description": "Call .div(amount) on a number"
   },
-  "_comment_number_is_float": "======================== number.is_float ========================",
-  "number.is_float (call)": {
+  "_comment_is_float": "======================== .is_float ========================",
+  ".is_float (call)": {
     "prefix": "is_float",
     "body": [
       "is_float()$0"
     ],
     "description": "Call .is_float() on a number"
   },
-  "_comment_number_is_integer": "======================== number.is_integer ========================",
-  "number.is_integer (call)": {
+  "_comment_is_integer": "======================== .is_integer ========================",
+  ".is_integer (call)": {
     "prefix": "is_integer",
     "body": [
       "is_integer()$0"
     ],
     "description": "Call .is_integer() on a number"
   },
-  "_comment_number_minus": "======================== number.minus ========================",
-  "number.minus (call)": {
+  "_comment_minus": "======================== .minus ========================",
+  ".minus (call)": {
     "prefix": "minus",
     "body": [
       "minus(${1:1})$0"
     ],
     "description": "Call .minus(amount) on a number"
   },
-  "_comment_number_multiply": "======================== number.multiply ========================",
-  "number.multiply (call)": {
+  "_comment_multiply": "======================== .multiply ========================",
+  ".multiply (call)": {
     "prefix": "multiply",
     "body": [
       "multiply(${1:2})$0"
     ],
     "description": "Call .multiply(amount) on a number"
   },
-  "_comment_number_plus": "======================== number.plus ========================",
-  "number.plus (call)": {
+  "_comment_plus": "======================== .plus ========================",
+  ".plus (call)": {
     "prefix": "plus",
     "body": [
       "plus(${1:1})$0"
     ],
     "description": "Call .plus(amount) on a number"
   },
-  "_comment_number_random_from": "======================== number.random_from ========================",
-  "number.random_from (call)": {
+  "_comment_random_from": "======================== .random_from ========================",
+  ".random_from (call)": {
     "prefix": "random_from",
     "body": [
       "random_from(${1:0})$0"
     ],
     "description": "Call .random_from(min) on a number"
   },
-  "_comment_number_lerp": "======================== number.lerp ========================",
-  "number.lerp (call)": {
+  "_comment_lerp": "======================== .lerp ========================",
+  ".lerp (call)": {
     "prefix": "lerp",
     "body": [
       "lerp(${1:min}, ${2:max}, ${3:offset})$0"
     ],
     "description": "Call .lerp(min, max, offset) on a number"
   },
-  "_comment_number_is_less_dot": "======================== number.is_less (dot trigger) ========================",
-  "number.is_less (call dot)": {
+  "_comment_is_less_dot": "======================== .is_less (dot trigger) ========================",
+  ".is_less (call dot)": {
     "prefix": ".is_less",
     "body": [
       ".is_less(${1:is_less})$0"
     ],
     "description": "Call .is_less(is_less) on a number"
   },
-  "_comment_number_is_more_dot": "======================== number.is_more (dot trigger) ========================",
-  "number.is_more (call dot)": {
+  "_comment_is_more_dot": "======================== .is_more (dot trigger) ========================",
+  ".is_more (call dot)": {
     "prefix": ".is_more",
     "body": [
       ".is_more(${1:is_more})$0"
     ],
     "description": "Call .is_more(is_more) on a number"
   },
-  "_comment_number_is_negative_dot": "======================== number.is_negative (dot trigger) ========================",
-  "number.is_negative (call dot)": {
+  "_comment_is_negative_dot": "======================== .is_negative (dot trigger) ========================",
+  ".is_negative (call dot)": {
     "prefix": ".is_negative",
     "body": [
       ".is_negative()$0"
     ],
     "description": "Call .is_negative() on a number"
   },
-  "_comment_number_is_positive_dot": "======================== number.is_positive (dot trigger) ========================",
-  "number.is_positive (call dot)": {
+  "_comment_is_positive_dot": "======================== .is_positive (dot trigger) ========================",
+  ".is_positive (call dot)": {
     "prefix": ".is_positive",
     "body": [
       ".is_positive()$0"
     ],
     "description": "Call .is_positive() on a number"
   },
-  "_comment_number_is_zero_dot": "======================== number.is_zero (dot trigger) ========================",
-  "number.is_zero (call dot)": {
+  "_comment_is_zero_dot": "======================== .is_zero (dot trigger) ========================",
+  ".is_zero (call dot)": {
     "prefix": ".is_zero",
     "body": [
       ".is_zero()$0"
     ],
     "description": "Call .is_zero() on a number"
   },
-  "_comment_number_clamp_dot": "======================== number.clamp (dot trigger) ========================",
-  "number.clamp (call dot)": {
+  "_comment_clamp_dot": "======================== .clamp (dot trigger) ========================",
+  ".clamp (call dot)": {
     "prefix": ".clamp",
     "body": [
       ".clamp(${1:min}, ${2:max})$0"
     ],
     "description": "Call .clamp(min, max) on a number"
   },
-  "_comment_number_diff_dot": "======================== number.diff (dot trigger) ========================",
-  "number.diff (call dot)": {
+  "_comment_diff_dot": "======================== .diff (dot trigger) ========================",
+  ".diff (call dot)": {
     "prefix": ".diff",
     "body": [
       ".diff(${1:0})$0"
     ],
     "description": "Call .diff(distanceTo) on a number"
   },
-  "_comment_number_div_dot": "======================== number.div (dot trigger) ========================",
-  "number.div (call dot)": {
+  "_comment_div_dot": "======================== .div (dot trigger) ========================",
+  ".div (call dot)": {
     "prefix": ".div",
     "body": [
       ".div(${1:2})$0"
     ],
     "description": "Call .div(amount) on a number"
   },
-  "_comment_number_is_float_dot": "======================== number.is_float (dot trigger) ========================",
-  "number.is_float (call dot)": {
+  "_comment_is_float_dot": "======================== .is_float (dot trigger) ========================",
+  ".is_float (call dot)": {
     "prefix": ".is_float",
     "body": [
       ".is_float()$0"
     ],
     "description": "Call .is_float() on a number"
   },
-  "_comment_number_is_integer_dot": "======================== number.is_integer (dot trigger) ========================",
-  "number.is_integer (call dot)": {
+  "_comment_is_integer_dot": "======================== .is_integer (dot trigger) ========================",
+  ".is_integer (call dot)": {
     "prefix": ".is_integer",
     "body": [
       ".is_integer()$0"
     ],
     "description": "Call .is_integer() on a number"
   },
-  "_comment_number_minus_dot": "======================== number.minus (dot trigger) ========================",
-  "number.minus (call dot)": {
+  "_comment_minus_dot": "======================== .minus (dot trigger) ========================",
+  ".minus (call dot)": {
     "prefix": ".minus",
     "body": [
       ".minus(${1:1})$0"
     ],
     "description": "Call .minus(amount) on a number"
   },
-  "_comment_number_multiply_dot": "======================== number.multiply (dot trigger) ========================",
-  "number.multiply (call dot)": {
+  "_comment_multiply_dot": "======================== .multiply (dot trigger) ========================",
+  ".multiply (call dot)": {
     "prefix": ".multiply",
     "body": [
       ".multiply(${1:2})$0"
     ],
     "description": "Call .multiply(amount) on a number"
   },
-  "_comment_number_plus_dot": "======================== number.plus (dot trigger) ========================",
-  "number.plus (call dot)": {
+  "_comment_plus_dot": "======================== .plus (dot trigger) ========================",
+  ".plus (call dot)": {
     "prefix": ".plus",
     "body": [
       ".plus(${1:1})$0"
     ],
     "description": "Call .plus(amount) on a number"
   },
-  "_comment_number_random_from_dot": "======================== number.random_from (dot trigger) ========================",
-  "number.random_from (call dot)": {
+  "_comment_random_from_dot": "======================== .random_from (dot trigger) ========================",
+  ".random_from (call dot)": {
     "prefix": ".random_from",
     "body": [
       ".random_from(${1:0})$0"
     ],
     "description": "Call .random_from(min) on a number"
   },
-  "_comment_number_lerp_dot": "======================== number.lerp (dot trigger) ========================",
-  "number.lerp (call dot)": {
+  "_comment_lerp_dot": "======================== .lerp (dot trigger) ========================",
+  ".lerp (call dot)": {
     "prefix": ".lerp",
     "body": [
       ".lerp(${1:min}, ${2:max}, ${3:offset})$0"

@@ -22,13 +22,5 @@
       ".get_attributes()$0"
     ],
     "description": "Call .get_attributes() on a map"
-  },
-  "_comment_map_push_once_dot": "======================== map.push_once (dot trigger) ========================",
-  "map.push_once (call dot)": {
-    "prefix": ".push_once",
-    "body": [
-      ".push_once(${1:mapItem})$0"
-    ],
-    "description": "Call .push_once(mapItem) on a map"
   }
 }

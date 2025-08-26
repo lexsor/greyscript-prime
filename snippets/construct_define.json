@@ -1,9 +1,9 @@
 {
-  "_comment_construct_fetch_whois": "======================== construct.fetch_whois ========================",
-  "construct.fetch_whois (define)": {
-    "prefix": "construct.fetch_whois",
+  "_comment_construct_fetch_whois": "======================== fetch_whois ========================",
+  "fetch_whois (define)": {
+    "prefix": "fetch_whois",
     "body": [
-      "construct.fetch_whois = function(routerPublicIPAddress)",
+      "fetch_whois = function(routerPublicIPAddress)",
       "\tif not is_lan_ip(locals.routerPublicIPAddress) == true then",
       "\t\tif is_valid_ip(routerPublicIPAddress) then",
       "\t\t\tlocals.whoisInfo = {\"classID\":\"whoisInfo\", \"admin\":\"\", \"domain\":\"\", \"email\":\"\", \"network\":\"\", \"phone\":\"\", \"error\":null}",
@@ -27,13 +27,13 @@
       "\treturn locals.whoisInfo",
       "end function"
     ],
-    "description": "Define construct.fetch_whois(routerPublicIPAddress)"
+    "description": "Define fetch_whois(routerPublicIPAddress)"
   },
-  "_comment_construct_file_location_ident": "======================== construct.file_location_ident ========================",
-  "construct.file_location_ident (define)": {
-    "prefix": "construct.file_location_ident",
+  "_comment_construct_file_location_ident": "======================== file_location_ident ========================",
+  "file_location_ident (define)": {
+    "prefix": "file_location_ident",
     "body": [
-      "construct.file_location_ident = function(absoluteLocation)",
+      "file_location_ident = function(absoluteLocation)",
       "        locals.ext = slice(locals.absoluteLocation, (locals.absoluteLocation.lastIndexOf(\".\") + 1), locals.absoluteLocation.len)",
       "        locals.name = slice(locals.absoluteLocation, locals.absoluteLocation.lastIndexOf(\"/\") + 1, locals.absoluteLocation.lastIndexOf(\".\"))",
       "\t\tlocals.filename = locals.name + \".\" + locals.ext",
@@ -44,13 +44,13 @@
       "        return locals.construct",
       "end function"
     ],
-    "description": "Define construct.file_location_ident(absoluteLocation)"
+    "description": "Define file_location_ident(absoluteLocation)"
   },
-  "_comment_construct_id_self": "======================== construct.id_self ========================",
-  "construct.id_self (define)": {
-    "prefix": "construct.id_self",
+  "_comment_construct_id_self": "======================== id_self ========================",
+  "id_self (define)": {
+    "prefix": "id_self",
     "body": [
-      "construct.id_self = function()",
+      "id_self = function()",
       "\tlocals.localRouter = get_router",
       "        if not typeof(locals.localRouter) == \"router\" then return \"Failed to fetch local router object.\"",
       "\tlocals.localComputer = get_shell.host_computer",
@@ -64,13 +64,13 @@
       "\treturn locals.currentStatus",
       "end function"
     ],
-    "description": "Define construct.id_self()"
+    "description": "Define id_self()"
   },
-  "_comment_construct_fetch_exploit_requirements": "======================== construct.fetch_exploit_requirements ========================",
-  "construct.fetch_exploit_requirements (define)": {
-    "prefix": "construct.fetch_exploit_requirements",
+  "_comment_construct_fetch_exploit_requirements": "======================== fetch_exploit_requirements ========================",
+  "fetch_exploit_requirements (define)": {
+    "prefix": "fetch_exploit_requirements",
     "body": [
-      "construct.fetch_exploit_requirements = function(targetAddress, metaLibObject, metaxploitObject)",
+      "fetch_exploit_requirements = function(targetAddress, metaLibObject, metaxploitObject)",
       "    locals.metax = locals.metaxploitObject",
       "    locals.metaLib = locals.metaLibObject",
       "    locals.allExploitData = []",
@@ -112,6 +112,6 @@
       "    return locals.allExploitData",
       "end function"
     ],
-    "description": "Define construct.fetch_exploit_requirements(targetAddress, metaLibObject, metaxploitObject)"
+    "description": "Define fetch_exploit_requirements(targetAddress, metaLibObject, metaxploitObject)"
   }
 }
