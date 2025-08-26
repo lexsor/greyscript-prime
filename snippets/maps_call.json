@@ -1,10 +1,7 @@
 {
   "_comment_map_get_attributes": "======================== map.get_attributes ========================",
   "map.get_attributes (call)": {
-    "prefix": [
-      "get_attributes",
-      ".get_attributes"
-    ],
+    "prefix": "get_attributes",
     "body": [
       "get_attributes()$0"
     ],
@@ -12,12 +9,25 @@
   },
   "_comment_map_push_once": "======================== map.push_once ========================",
   "map.push_once (call)": {
-    "prefix": [
-      "push_once",
-      ".push_once"
-    ],
+    "prefix": "push_once",
     "body": [
       "push_once(${1:mapItem})$0"
+    ],
+    "description": "Call .push_once(mapItem) on a map"
+  },
+  "_comment_map_get_attributes_dot": "======================== map.get_attributes (dot trigger) ========================",
+  "map.get_attributes (call dot)": {
+    "prefix": ".get_attributes",
+    "body": [
+      ".get_attributes()$0"
+    ],
+    "description": "Call .get_attributes() on a map"
+  },
+  "_comment_map_push_once_dot": "======================== map.push_once (dot trigger) ========================",
+  "map.push_once (call dot)": {
+    "prefix": ".push_once",
+    "body": [
+      ".push_once(${1:mapItem})$0"
     ],
     "description": "Call .push_once(mapItem) on a map"
   }

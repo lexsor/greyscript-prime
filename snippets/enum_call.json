@@ -1,12 +1,17 @@
 {
   "_comment_enum_report__string_construct__": "======================== enum.report_string_construct__ ========================",
   "enum.report_string_construct__ (call)": {
-    "prefix": [
-      "report_string_construct__",
-      ".report_string_construct__"
-    ],
+    "prefix": "report_string_construct__",
     "body": [
       "report_string_construct__()$0"
+    ],
+    "description": "Call .report_string_construct__() on an enum"
+  },
+  "_comment_enum_report_string_construct___dot": "======================== enum.report_string_construct__ (dot trigger) ========================",
+  "enum.report_string_construct__ (call dot)": {
+    "prefix": ".report_string_construct__",
+    "body": [
+      ".report_string_construct__()$0"
     ],
     "description": "Call .report_string_construct__() on an enum"
   }

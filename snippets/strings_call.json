@@ -1,10 +1,7 @@
 {
   "_comment_uppercase": "======================== string.uppercase ========================",
   "string.uppercase (call)": {
-    "prefix": [
-      "uppercase",
-      ".uppercase"
-    ],
+    "prefix": "uppercase",
     "body": [
       "uppercase()$0"
     ],
@@ -12,10 +9,7 @@
   },
   "_comment_width": "======================== string.width ========================",
   "string.width (call)": {
-    "prefix": [
-      "width",
-      ".width"
-    ],
+    "prefix": "width",
     "body": [
       "width(${1:\"50%\"})$0"
     ],
@@ -23,10 +17,7 @@
   },
   "_comment_pos": "======================== string.pos ========================",
   "string.pos (call)": {
-    "prefix": [
-      "pos",
-      ".pos"
-    ],
+    "prefix": "pos",
     "body": [
       "pos(${1:\"50%\"})$0"
     ],
@@ -34,10 +25,7 @@
   },
   "_comment_underline": "======================== string.underline ========================",
   "string.underline (call)": {
-    "prefix": [
-      "underline",
-      ".underline"
-    ],
+    "prefix": "underline",
     "body": [
       "underline()$0"
     ],
@@ -45,10 +33,7 @@
   },
   "_comment_line_indent": "======================== string.line_indent ========================",
   "string.line_indent (call)": {
-    "prefix": [
-      "line_indent",
-      ".line_indent"
-    ],
+    "prefix": "line_indent",
     "body": [
       "line_indent(${1:\"15%\"}, ${2:true})$0"
     ],
@@ -56,10 +41,7 @@
   },
   "_comment_italic": "======================== string.italic ========================",
   "string.italic (call)": {
-    "prefix": [
-      "italic",
-      ".italic"
-    ],
+    "prefix": "italic",
     "body": [
       "italic()$0"
     ],
@@ -67,10 +49,7 @@
   },
   "_comment_rotate": "======================== string.rotate ========================",
   "string.rotate (call)": {
-    "prefix": [
-      "rotate",
-      ".rotate"
-    ],
+    "prefix": "rotate",
     "body": [
       "rotate(${1:\"45\"})$0"
     ],
@@ -78,10 +57,7 @@
   },
   "_comment_page": "======================== string.page ========================",
   "string.page (call)": {
-    "prefix": [
-      "page",
-      ".page"
-    ],
+    "prefix": "page",
     "body": [
       "page()$0"
     ],
@@ -89,10 +65,7 @@
   },
   "_comment_noparse": "======================== string.noparse ========================",
   "string.noparse (call)": {
-    "prefix": [
-      "noparse",
-      ".noparse"
-    ],
+    "prefix": "noparse",
     "body": [
       "noparse()$0"
     ],
@@ -100,10 +73,7 @@
   },
   "_comment_sub": "======================== string.sub ========================",
   "string.sub (call)": {
-    "prefix": [
-      "sub",
-      ".sub"
-    ],
+    "prefix": "sub",
     "body": [
       "sub()$0"
     ],
@@ -111,10 +81,7 @@
   },
   "_comment_size": "======================== string.size ========================",
   "string.size (call)": {
-    "prefix": [
-      "size",
-      ".size"
-    ],
+    "prefix": "size",
     "body": [
       "size(${1:\"5em\"})$0"
     ],
@@ -122,10 +89,7 @@
   },
   "_comment_mspace": "======================== string.mspace ========================",
   "string.mspace (call)": {
-    "prefix": [
-      "mspace",
-      ".mspace"
-    ],
+    "prefix": "mspace",
     "body": [
       "mspace(${1:\"2.75em\"})$0"
     ],
@@ -133,10 +97,7 @@
   },
   "_comment_voffset": "======================== string.voffset ========================",
   "string.voffset (call)": {
-    "prefix": [
-      "voffset",
-      ".voffset"
-    ],
+    "prefix": "voffset",
     "body": [
       "voffset(${1:\"1em\"})$0"
     ],
@@ -144,10 +105,7 @@
   },
   "_comment_nobr": "======================== string.nobr ========================",
   "string.nobr (call)": {
-    "prefix": [
-      "nobr",
-      ".nobr"
-    ],
+    "prefix": "nobr",
     "body": [
       "nobr()$0"
     ],
@@ -155,10 +113,7 @@
   },
   "_comment_strike": "======================== string.strike ========================",
   "string.strike (call)": {
-    "prefix": [
-      "strike",
-      ".strike"
-    ],
+    "prefix": "strike",
     "body": [
       "strike()$0"
     ],
@@ -166,10 +121,7 @@
   },
   "_comment_sup": "======================== string.sup ========================",
   "string.sup (call)": {
-    "prefix": [
-      "sup",
-      ".sup"
-    ],
+    "prefix": "sup",
     "body": [
       "sup()$0"
     ],
@@ -177,10 +129,7 @@
   },
   "_comment_margin": "======================== string.margin ========================",
   "string.margin (call)": {
-    "prefix": [
-      "margin",
-      ".margin"
-    ],
+    "prefix": "margin",
     "body": [
       "margin(${1:\"5em\"})$0"
     ],
@@ -188,10 +137,7 @@
   },
   "_comment_bold": "======================== string.bold ========================",
   "string.bold (call)": {
-    "prefix": [
-      "bold",
-      ".bold"
-    ],
+    "prefix": "bold",
     "body": [
       "bold()$0"
     ],
@@ -199,10 +145,7 @@
   },
   "_comment_alpha": "======================== string.alpha ========================",
   "string.alpha (call)": {
-    "prefix": [
-      "alpha",
-      ".alpha"
-    ],
+    "prefix": "alpha",
     "body": [
       "alpha(${1:\"#FF\"})$0"
     ],
@@ -210,10 +153,7 @@
   },
   "_comment_mark": "======================== string.mark ========================",
   "string.mark (call)": {
-    "prefix": [
-      "mark",
-      ".mark"
-    ],
+    "prefix": "mark",
     "body": [
       "mark(${1:\"#FFFF00BF\"})$0"
     ],
@@ -221,10 +161,7 @@
   },
   "_comment_indent": "======================== string.indent ========================",
   "string.indent (call)": {
-    "prefix": [
-      "indent",
-      ".indent"
-    ],
+    "prefix": "indent",
     "body": [
       "indent(${1:\"15%\"}, ${2:true})$0"
     ],
@@ -232,10 +169,7 @@
   },
   "_comment_lowercase": "======================== string.lowercase ========================",
   "string.lowercase (call)": {
-    "prefix": [
-      "lowercase",
-      ".lowercase"
-    ],
+    "prefix": "lowercase",
     "body": [
       "lowercase()$0"
     ],
@@ -243,10 +177,7 @@
   },
   "_comment_color": "======================== string.color ========================",
   "string.color (call)": {
-    "prefix": [
-      "color",
-      ".color"
-    ],
+    "prefix": "color",
     "body": [
       "color(${1:colorValue})$0"
     ],
@@ -254,10 +185,7 @@
   },
   "_comment_cspace": "======================== string.cspace ========================",
   "string.cspace (call)": {
-    "prefix": [
-      "cspace",
-      ".cspace"
-    ],
+    "prefix": "cspace",
     "body": [
       "cspace(${1:\"1em\"}, ${2:true})$0"
     ],
@@ -265,10 +193,7 @@
   },
   "_comment_extract": "======================== string.extract ========================",
   "string.extract (call)": {
-    "prefix": [
-      "extract",
-      ".extract"
-    ],
+    "prefix": "extract",
     "body": [
       "extract(${1:\"<b>\"}, ${2:\"</b>\"})$0"
     ],
@@ -276,10 +201,7 @@
   },
   "_comment_format": "======================== string.format ========================",
   "string.format (call)": {
-    "prefix": [
-      "format",
-      ".format"
-    ],
+    "prefix": "format",
     "body": [
       "format(${1:[\"name\",\"place\"]}, ${2:\"%s\"})$0"
     ],
@@ -287,10 +209,7 @@
   },
   "_comment_mask": "======================== string.mask ========================",
   "string.mask (call)": {
-    "prefix": [
-      "mask",
-      ".mask"
-    ],
+    "prefix": "mask",
     "body": [
       "mask(${1:true}, ${2:char(42)}, ${3:null})$0"
     ],
@@ -298,10 +217,7 @@
   },
   "_comment_align": "======================== string.align ========================",
   "string.align (call)": {
-    "prefix": [
-      "align",
-      ".align"
-    ],
+    "prefix": "align",
     "body": [
       "align(${1:\"center\"}, ${2:true})$0"
     ],
@@ -309,10 +225,7 @@
   },
   "_comment_remove_bold": "======================== string.remove_bold ========================",
   "string.remove_bold (call)": {
-    "prefix": [
-      "remove_bold",
-      ".remove_bold"
-    ],
+    "prefix": "remove_bold",
     "body": [
       "remove_bold()$0"
     ],
@@ -320,10 +233,7 @@
   },
   "_comment_remove_italic": "======================== string.remove_italic ========================",
   "string.remove_italic (call)": {
-    "prefix": [
-      "remove_italic",
-      ".remove_italic"
-    ],
+    "prefix": "remove_italic",
     "body": [
       "remove_italic()$0"
     ],
@@ -331,10 +241,7 @@
   },
   "_comment_remove_mark": "======================== string.remove_mark ========================",
   "string.remove_mark (call)": {
-    "prefix": [
-      "remove_mark",
-      ".remove_mark"
-    ],
+    "prefix": "remove_mark",
     "body": [
       "remove_mark()$0"
     ],
@@ -342,10 +249,7 @@
   },
   "_comment_remove_strike": "======================== string.remove_strike ========================",
   "string.remove_strike (call)": {
-    "prefix": [
-      "remove_strike",
-      ".remove_strike"
-    ],
+    "prefix": "remove_strike",
     "body": [
       "remove_strike()$0"
     ],
@@ -353,10 +257,7 @@
   },
   "_comment_remove_sub": "======================== string.remove_sub ========================",
   "string.remove_sub (call)": {
-    "prefix": [
-      "remove_sub",
-      ".remove_sub"
-    ],
+    "prefix": "remove_sub",
     "body": [
       "remove_sub()$0"
     ],
@@ -364,10 +265,7 @@
   },
   "_comment_remove_sup": "======================== string.remove_sup ========================",
   "string.remove_sup (call)": {
-    "prefix": [
-      "remove_sup",
-      ".remove_sup"
-    ],
+    "prefix": "remove_sup",
     "body": [
       "remove_sup()$0"
     ],
@@ -375,10 +273,7 @@
   },
   "_comment_remove_underline": "======================== string.remove_underline ========================",
   "string.remove_underline (call)": {
-    "prefix": [
-      "remove_underline",
-      ".remove_underline"
-    ],
+    "prefix": "remove_underline",
     "body": [
       "remove_underline()$0"
     ],
@@ -386,10 +281,7 @@
   },
   "_comment_remove_char_first": "======================== string.remove_char_first ========================",
   "string.remove_char_first (call)": {
-    "prefix": [
-      "remove_char_first",
-      ".remove_char_first"
-    ],
+    "prefix": "remove_char_first",
     "body": [
       "remove_char_first()$0"
     ],
@@ -397,12 +289,305 @@
   },
   "_comment_remove_char_last": "======================== string.remove_char_last ========================",
   "string.remove_char_last (call)": {
-    "prefix": [
-      "remove_char_last",
-      ".remove_char_last"
-    ],
+    "prefix": "remove_char_last",
     "body": [
       "remove_char_last()$0"
+    ],
+    "description": "Call .remove_char_last() on a string"
+  },
+  "_comment_string_uppercase_dot": "======================== string.uppercase (dot trigger) ========================",
+  "string.uppercase (call dot)": {
+    "prefix": ".uppercase",
+    "body": [
+      ".uppercase()$0"
+    ],
+    "description": "Call .uppercase() on a string"
+  },
+  "_comment_string_width_dot": "======================== string.width (dot trigger) ========================",
+  "string.width (call dot)": {
+    "prefix": ".width",
+    "body": [
+      ".width(${1:\"50%\"})$0"
+    ],
+    "description": "Call .width(hSize) on a string"
+  },
+  "_comment_string_pos_dot": "======================== string.pos (dot trigger) ========================",
+  "string.pos (call dot)": {
+    "prefix": ".pos",
+    "body": [
+      ".pos(${1:\"50%\"})$0"
+    ],
+    "description": "Call .pos(position) on a string"
+  },
+  "_comment_string_underline_dot": "======================== string.underline (dot trigger) ========================",
+  "string.underline (call dot)": {
+    "prefix": ".underline",
+    "body": [
+      ".underline()$0"
+    ],
+    "description": "Call .underline() on a string"
+  },
+  "_comment_string_line_indent_dot": "======================== string.line_indent (dot trigger) ========================",
+  "string.line_indent (call dot)": {
+    "prefix": ".line_indent",
+    "body": [
+      ".line_indent(${1:\"15%\"}, ${2:true})$0"
+    ],
+    "description": "Call .line_indent(lineIndent, closeTag) on a string"
+  },
+  "_comment_string_italic_dot": "======================== string.italic (dot trigger) ========================",
+  "string.italic (call dot)": {
+    "prefix": ".italic",
+    "body": [
+      ".italic()$0"
+    ],
+    "description": "Call .italic() on a string"
+  },
+  "_comment_string_rotate_dot": "======================== string.rotate (dot trigger) ========================",
+  "string.rotate (call dot)": {
+    "prefix": ".rotate",
+    "body": [
+      ".rotate(${1:\"45\"})$0"
+    ],
+    "description": "Call .rotate(degreesRotation) on a string"
+  },
+  "_comment_string_page_dot": "======================== string.page (dot trigger) ========================",
+  "string.page (call dot)": {
+    "prefix": ".page",
+    "body": [
+      ".page()$0"
+    ],
+    "description": "Call .page() on a string"
+  },
+  "_comment_string_noparse_dot": "======================== string.noparse (dot trigger) ========================",
+  "string.noparse (call dot)": {
+    "prefix": ".noparse",
+    "body": [
+      ".noparse()$0"
+    ],
+    "description": "Call .noparse() on a string"
+  },
+  "_comment_string_sub_dot": "======================== string.sub (dot trigger) ========================",
+  "string.sub (call dot)": {
+    "prefix": ".sub",
+    "body": [
+      ".sub()$0"
+    ],
+    "description": "Call .sub() on a string"
+  },
+  "_comment_string_size_dot": "======================== string.size (dot trigger) ========================",
+  "string.size (call dot)": {
+    "prefix": ".size",
+    "body": [
+      ".size(${1:\"5em\"})$0"
+    ],
+    "description": "Call .size(textSize) on a string"
+  },
+  "_comment_string_mspace_dot": "======================== string.mspace (dot trigger) ========================",
+  "string.mspace (call dot)": {
+    "prefix": ".mspace",
+    "body": [
+      ".mspace(${1:\"2.75em\"})$0"
+    ],
+    "description": "Call .mspace(monospace) on a string"
+  },
+  "_comment_string_voffset_dot": "======================== string.voffset (dot trigger) ========================",
+  "string.voffset (call dot)": {
+    "prefix": ".voffset",
+    "body": [
+      ".voffset(${1:\"1em\"})$0"
+    ],
+    "description": "Call .voffset(verticalOffset) on a string"
+  },
+  "_comment_string_nobr_dot": "======================== string.nobr (dot trigger) ========================",
+  "string.nobr (call dot)": {
+    "prefix": ".nobr",
+    "body": [
+      ".nobr()$0"
+    ],
+    "description": "Call .nobr() on a string"
+  },
+  "_comment_string_strike_dot": "======================== string.strike (dot trigger) ========================",
+  "string.strike (call dot)": {
+    "prefix": ".strike",
+    "body": [
+      ".strike()$0"
+    ],
+    "description": "Call .strike() on a string"
+  },
+  "_comment_string_sup_dot": "======================== string.sup (dot trigger) ========================",
+  "string.sup (call dot)": {
+    "prefix": ".sup",
+    "body": [
+      ".sup()$0"
+    ],
+    "description": "Call .sup() on a string"
+  },
+  "_comment_string_margin_dot": "======================== string.margin (dot trigger) ========================",
+  "string.margin (call dot)": {
+    "prefix": ".margin",
+    "body": [
+      ".margin(${1:\"5em\"})$0"
+    ],
+    "description": "Call .margin(marginSpace) on a string"
+  },
+  "_comment_string_bold_dot": "======================== string.bold (dot trigger) ========================",
+  "string.bold (call dot)": {
+    "prefix": ".bold",
+    "body": [
+      ".bold()$0"
+    ],
+    "description": "Call .bold() on a string"
+  },
+  "_comment_string_alpha_dot": "======================== string.alpha (dot trigger) ========================",
+  "string.alpha (call dot)": {
+    "prefix": ".alpha",
+    "body": [
+      ".alpha(${1:\"#FF\"})$0"
+    ],
+    "description": "Call .alpha(hexOpacity) on a string"
+  },
+  "_comment_string_mark_dot": "======================== string.mark (dot trigger) ========================",
+  "string.mark (call dot)": {
+    "prefix": ".mark",
+    "body": [
+      ".mark(${1:\"#FFFF00BF\"})$0"
+    ],
+    "description": "Call .mark(color) on a string"
+  },
+  "_comment_string_indent_dot": "======================== string.indent (dot trigger) ========================",
+  "string.indent (call dot)": {
+    "prefix": ".indent",
+    "body": [
+      ".indent(${1:\"15%\"}, ${2:true})$0"
+    ],
+    "description": "Call .indent(indentPercent, closeTag) on a string"
+  },
+  "_comment_string_lowercase_dot": "======================== string.lowercase (dot trigger) ========================",
+  "string.lowercase (call dot)": {
+    "prefix": ".lowercase",
+    "body": [
+      ".lowercase()$0"
+    ],
+    "description": "Call .lowercase() on a string"
+  },
+  "_comment_string_color_dot": "======================== string.color (dot trigger) ========================",
+  "string.color (call dot)": {
+    "prefix": ".color",
+    "body": [
+      ".color(${1:colorValue})$0"
+    ],
+    "description": "Call .color(colorValue) on a string"
+  },
+  "_comment_string_cspace_dot": "======================== string.cspace (dot trigger) ========================",
+  "string.cspace (call dot)": {
+    "prefix": ".cspace",
+    "body": [
+      ".cspace(${1:\"1em\"}, ${2:true})$0"
+    ],
+    "description": "Call .cspace(charSpacing, closeTag) on a string"
+  },
+  "_comment_string_extract_dot": "======================== string.extract (dot trigger) ========================",
+  "string.extract (call dot)": {
+    "prefix": ".extract",
+    "body": [
+      ".extract(${1:\"<b>\"}, ${2:\"</b>\"})$0"
+    ],
+    "description": "Call .extract(tagStart, tagEnd) on a string"
+  },
+  "_comment_string_format_dot": "======================== string.format (dot trigger) ========================",
+  "string.format (call dot)": {
+    "prefix": ".format",
+    "body": [
+      ".format(${1:[\"name\",\"place\"]}, ${2:\"%s\"})$0"
+    ],
+    "description": "Call .format(args, delim) on a string"
+  },
+  "_comment_string_mask_dot": "======================== string.mask (dot trigger) ========================",
+  "string.mask (call dot)": {
+    "prefix": ".mask",
+    "body": [
+      ".mask(${1:true}, ${2:char(42)}, ${3:null})$0"
+    ],
+    "description": "Call .mask(maskString, maskChar, maskColor) on a string"
+  },
+  "_comment_string_align_dot": "======================== string.align (dot trigger) ========================",
+  "string.align (call dot)": {
+    "prefix": ".align",
+    "body": [
+      ".align(${1:\"center\"}, ${2:true})$0"
+    ],
+    "description": "Call .align(alignment, closeTag) on a string"
+  },
+  "_comment_string_remove_bold_dot": "======================== string.remove_bold (dot trigger) ========================",
+  "string.remove_bold (call dot)": {
+    "prefix": ".remove_bold",
+    "body": [
+      ".remove_bold()$0"
+    ],
+    "description": "Call .remove_bold() on a string"
+  },
+  "_comment_string_remove_italic_dot": "======================== string.remove_italic (dot trigger) ========================",
+  "string.remove_italic (call dot)": {
+    "prefix": ".remove_italic",
+    "body": [
+      ".remove_italic()$0"
+    ],
+    "description": "Call .remove_italic() on a string"
+  },
+  "_comment_string_remove_mark_dot": "======================== string.remove_mark (dot trigger) ========================",
+  "string.remove_mark (call dot)": {
+    "prefix": ".remove_mark",
+    "body": [
+      ".remove_mark()$0"
+    ],
+    "description": "Call .remove_mark() on a string"
+  },
+  "_comment_string_remove_strike_dot": "======================== string.remove_strike (dot trigger) ========================",
+  "string.remove_strike (call dot)": {
+    "prefix": ".remove_strike",
+    "body": [
+      ".remove_strike()$0"
+    ],
+    "description": "Call .remove_strike() on a string"
+  },
+  "_comment_string_remove_sub_dot": "======================== string.remove_sub (dot trigger) ========================",
+  "string.remove_sub (call dot)": {
+    "prefix": ".remove_sub",
+    "body": [
+      ".remove_sub()$0"
+    ],
+    "description": "Call .remove_sub() on a string"
+  },
+  "_comment_string_remove_sup_dot": "======================== string.remove_sup (dot trigger) ========================",
+  "string.remove_sup (call dot)": {
+    "prefix": ".remove_sup",
+    "body": [
+      ".remove_sup()$0"
+    ],
+    "description": "Call .remove_sup() on a string"
+  },
+  "_comment_string_remove_underline_dot": "======================== string.remove_underline (dot trigger) ========================",
+  "string.remove_underline (call dot)": {
+    "prefix": ".remove_underline",
+    "body": [
+      ".remove_underline()$0"
+    ],
+    "description": "Call .remove_underline() on a string"
+  },
+  "_comment_string_remove_char_first_dot": "======================== string.remove_char_first (dot trigger) ========================",
+  "string.remove_char_first (call dot)": {
+    "prefix": ".remove_char_first",
+    "body": [
+      ".remove_char_first()$0"
+    ],
+    "description": "Call .remove_char_first() on a string"
+  },
+  "_comment_string_remove_char_last_dot": "======================== string.remove_char_last (dot trigger) ========================",
+  "string.remove_char_last (call dot)": {
+    "prefix": ".remove_char_last",
+    "body": [
+      ".remove_char_last()$0"
     ],
     "description": "Call .remove_char_last() on a string"
   }

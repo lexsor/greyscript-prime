@@ -1,10 +1,7 @@
 {
   "_comment_construct_fetch_whois": "======================== construct.fetch_whois ========================",
   "construct.fetch_whois (call)": {
-    "prefix": [
-      "fetch_whois",
-      ".fetch_whois"
-    ],
+    "prefix": "fetch_whois",
     "body": [
       "fetch_whois(${1:routerPublicIPAddress})$0"
     ],
@@ -12,10 +9,7 @@
   },
   "_comment_construct_file_location_ident": "======================== construct.file_location_ident ========================",
   "construct.file_location_ident (call)": {
-    "prefix": [
-      "file_location_ident",
-      ".file_location_ident"
-    ],
+    "prefix": "file_location_ident",
     "body": [
       "file_location_ident(${1:absoluteLocation})$0"
     ],
@@ -23,10 +17,7 @@
   },
   "_comment_construct_id_self": "======================== construct.id_self ========================",
   "construct.id_self (call)": {
-    "prefix": [
-      "id_self",
-      ".id_self"
-    ],
+    "prefix": "id_self",
     "body": [
       "id_self()$0"
     ],
@@ -34,12 +25,41 @@
   },
   "_comment_construct_fetch_exploit_requirements": "======================== construct.fetch_exploit_requirements ========================",
   "construct.fetch_exploit_requirements (call)": {
-    "prefix": [
-      "fetch_exploit_requirements",
-      ".fetch_exploit_requirements"
-    ],
+    "prefix": "fetch_exploit_requirements",
     "body": [
       "fetch_exploit_requirements(${1:targetAddress}, ${2:metaLibObject}, ${3:metaxploitObject})$0"
+    ],
+    "description": "Call .fetch_exploit_requirements(targetAddress, metaLibObject, metaxploitObject) on a construct"
+  },
+  "_comment_construct_fetch_whois_dot": "======================== construct.fetch_whois (dot trigger) ========================",
+  "construct.fetch_whois (call dot)": {
+    "prefix": ".fetch_whois",
+    "body": [
+      ".fetch_whois(${1:routerPublicIPAddress})$0"
+    ],
+    "description": "Call .fetch_whois(routerPublicIPAddress) on a construct"
+  },
+  "_comment_construct_file_location_ident_dot": "======================== construct.file_location_ident (dot trigger) ========================",
+  "construct.file_location_ident (call dot)": {
+    "prefix": ".file_location_ident",
+    "body": [
+      ".file_location_ident(${1:absoluteLocation})$0"
+    ],
+    "description": "Call .file_location_ident(absoluteLocation) on a construct"
+  },
+  "_comment_construct_id_self_dot": "======================== construct.id_self (dot trigger) ========================",
+  "construct.id_self (call dot)": {
+    "prefix": ".id_self",
+    "body": [
+      ".id_self()$0"
+    ],
+    "description": "Call .id_self() on a construct"
+  },
+  "_comment_construct_fetch_exploit_requirements_dot": "======================== construct.fetch_exploit_requirements (dot trigger) ========================",
+  "construct.fetch_exploit_requirements (call dot)": {
+    "prefix": ".fetch_exploit_requirements",
+    "body": [
+      ".fetch_exploit_requirements(${1:targetAddress}, ${2:metaLibObject}, ${3:metaxploitObject})$0"
     ],
     "description": "Call .fetch_exploit_requirements(targetAddress, metaLibObject, metaxploitObject) on a construct"
   }
