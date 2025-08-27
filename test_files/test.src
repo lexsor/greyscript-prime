@@ -1,0 +1,11 @@
+myList = ["cat","dog"]
+list.string = function(seperator = char(10))
+    locals.printString = split(self, locals.seperator)
+    return locals.printString
+end function
+
+basic = myList.string
+comma = myList.string(",")
+
+print(mylist[0:])
+print(comma)

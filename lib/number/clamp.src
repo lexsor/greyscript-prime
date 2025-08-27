@@ -1,0 +1,50 @@
+// Keeps a number within a specified range
+	// @description **Description:**
+	// @description Ensure an number stays between a minimim and maximum value
+	// @description
+	//
+	// @description **Parameters:**
+    // @param {number} min - The min threshold.
+    // @param {number} max - The max threshold.    
+	// @description - `min` The min threshold.
+    // @description - `max` The max threshold.
+    //
+	// @description **Parameter Defaults:**
+    // @description - none
+    // @description
+    //
+	// @description **Return:**
+	// @return {number} he result of the clamp
+	// @description `number`
+	// @description
+	//
+	// @description **Author:** Svarii
+	// @description **Version:** 0.0.1
+	// @description
+	//
+	// @example myNumber = 42
+	// @example
+    // print myNumber.clamp(42, 100) // Return 42
+	// print myNumber.clamp(75, 100) // Return 75
+    // print myNumber.clamp(0, 40) // Return 40
+number.clamp = function(min, max)
+            if self < locals.min then return locals.min
+            if self > locals.max then return locals.max
+            return self
+end function
+// @startuml
+// title <color:purple>number.clamp Method Diagram</color>
+//
+// class NumberObject {
+//   + value : number
+//   + clamp(min: number, max: number) : number
+// }
+//
+// note bottom of NumberObject
+//   Limits the object's value within the specified range.
+//   Usage examples:
+//     • 7.clamp(2, 6) → 6  (value exceeds max; clamped to 6)
+//     • 1.clamp(2, 6) → 2  (value below min; clamped to 2)
+// end note
+//
+// @enduml

@@ -30,78 +30,78 @@ To install GreyScript Prime, follow these steps:
 > <details>
 > <summary>🅰️  Text Mesh Pro Methods</summary>
 >
-> - string.[align](#align)
-> - string.[alpha](#alpha)
-> - string.[bold](#bold)
-> - string.[color](#color)
-> - string.[cspace](#cspace)
-> - string.[indent](#indent)
-> - string.[italic](#italic)
-> - string.[line-indent](#line-indent)
-> - string.[lowercase](#lowercase)
-> - string.[margin](#margin)
-> - string.[mark](#mark)
-> - string.[mspace](#mspace)
-> - string.[nobr](#nobr)
-> - string.[noparse](#noparse)
-> - string.[page](#page)
-> - string.[pos](#pos)
-> - string.[rotate](#rotate)
-> - string.[size](#size)
-> - string.[strike](#strike)
-> - string.[sub](#sub)
-> - string.[sup](#sup)
-> - string.[sub](#sub)
-> - string.[underline](#underline)
-> - string.[uppercase](#uppercase)
-> - string.[voffset](#voffset)
-> - string.[width](#width)
+> - string.[align](docs/README.md/#align)
+> - string.[alpha](docs/README.md/#alpha)
+> - string.[bold](docs/README.md/#bold)
+> - string.[color](docs/README.md/#color)
+> - string.[cspace](docs/README.md/#cspace)
+> - string.[indent](docs/README.md/#indent)
+> - string.[italic](docs/README.md/#italic)
+> - string.[line-indent](docs/README.md/#line-indent)
+> - string.[lowercase](docs/README.md/#lowercase)
+> - string.[margin](docs/README.md/#margin)
+> - string.[mark](docs/README.md/#mark)
+> - string.[mspace](docs/README.md/#mspace)
+> - string.[nobr](docs/README.md/#nobr)
+> - string.[noparse](docs/README.md/#noparse)
+> - string.[page](docs/README.md/#page)
+> - string.[pos](docs/README.md/#pos)
+> - string.[rotate](docs/README.md/#rotate)
+> - string.[size](docs/README.md/#size)
+> - string.[strike](docs/README.md/#strike)
+> - string.[sub](docs/README.md/#sub)
+> - string.[sup](docs/README.md/#sup)
+> - string.[sub](docs/README.md/#sub)
+> - string.[underline](docs/README.md/#underline)
+> - string.[uppercase](docs/README.md/#uppercase)
+> - string.[voffset](docs/README.md/#voffset)
+> - string.[width](docs/README.md/#width)
 > </details>
 >
 > <details>
 > <summary>🔢 Number Methods</summary>
 >
-> - number.[clamp](#clamp)
-> - number.[diff](#diff)
-> - number.[divide](#divide)
-> - number.[is_more](#is_more)
-> - number.[is_less](#is_less)
-> - number.[lerp](#lerp)
-> - number.[minus](#minus)
-> - number.[multiply](#multiply)
-> - number.[plus](#plus)
-> - number.[random_from](#random_from)
-> - number.[saturate](#saturate)
+> - number.[clamp](docs/README.md/#clamp)
+> - number.[diff](docs/README.md/#diff)
+> - number.[divide](docs/README.md/#divide)
+> - number.[is_more](docs/README.md/#is_more)
+> - number.[is_less](docs/README.md/#is_less)
+> - number.[lerp](docs/README.md/#lerp)
+> - number.[minus](docs/README.md/#minus)
+> - number.[multiply](docs/README.md/#multiply)
+> - number.[plus](docs/README.md/#plus)
+> - number.[random_from](docs/README.md/#random_from)
+> - number.[saturate](docs/README.md/#saturate)
 > </details>
 > <details>
 > <summary>📋 List Methods</summary>
 >
-> - list.[crop](#crop)
-> - list.[string](#string)
+> - list.[crop](docs/README.md/#crop)
+> - list.[string](docs/README.md/#string)
 > </details>
 >
 > <details>
 > <summary>🗂️ Map Methods</summary>
 >
-> - map.[get_atrributes](#get_atrributes)
+> - map.[get_atrributes](docs/README.md/#get_atrributes)
 > </details>
 >
 > <details>
 > <summary>📁 File Management Functions</summary>
 > 
-> - [file_append](#file_append)
-> - [file_delete](#file_delete)
-> - [file_exists](#file_exists)
-> - [file_new](#file_new)
+> - [file_append](docs/README.md/#file_append)
+> - [file_delete](docs/README.md/#file_delete)
+> - [file_exists](docs/README.md/#file_exists)
+> - [file_new](docs/README.md/#file_new)
 > </details>
 >
 > <details>
 > <summary>⚙️ Task Functions</summary>
 > 
-> - [file_append](#file_append)
-> - [file_delete](#file_delete)
-> - [file_exists](#file_exists)
-> - [file_new](#file_new)
+> - [file_append](docs/README.md/#file_append)
+> - [file_delete](docs/README.md/#file_delete)
+> - [file_exists](docs/README.md/#file_exists)
+> - [file_new](docs/README.md/#file_new)
 > </details>
 
 

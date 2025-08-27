@@ -1,0 +1,55 @@
+// load a library with 
+// @description **Description:**
+// Loads a library from the lib directory, optionally specifiy directory, optionally verify type
+// @description ---
+// 
+// @description **Links:**
+// [Default type list](https://documentation.greyscript.org/#GENERAL_TYPEOF)
+// @description ---
+// 
+// @description **Parameters:**
+// @param {string} libName
+// @param {string} [libDir]
+// @param {string} [libType]
+// @description - `libName` (**string**): The file name of the library to scan.
+// @description - `libDir` (**string**, *optional*): The directory where the library is located.
+// @description - `libType` (**string**, *optional*): The expected type of the library.
+//
+// @description **Return:** `objectLibrary` | `null`
+// @return {objectLibrary | null}
+// @return {objectLibrary} 
+// @description ---   
+// 
+// @description **Author:** Svarii
+// @description **Version:** 0.0.1
+// @description ---    
+//
+// @description *footnotes*
+// @description * `libName` must be full filename including extension
+// @description * `libDir` should not have trailing slash
+// @description * `libType` is case sensitive
+// @description ---
+// 
+// @example lib = load_lib                                              //Load metaxploit.so from /lib directory
+// @example lib = load_lib("metaxploit.so")                             //Load a library without specifying type
+// @example lib = load_lib("customLib.so", "/altLib")                   //Load a library from specified directory
+// @example lib = load_lib("crypto.so", "/lib", "cryptoLib")            //Load a library with a specified type (null on type mismatch)
+load_lib = function(libName = "metaxploit.so", libDir = "/lib", libType = "")
+    locals.libLocation = locals.libDir + "/" + locals.libName
+    if locals.libName == "" then
+        return null
+    end if
+    locals.lib = include_lib(locals.libLocation)
+        if not typeof(locals.lib) == null then
+            if locals.libType == "" then
+                return locals.lib
+            else if typeof(locals.lib) == locals.libType then
+                return locals.lib
+			else
+				return null
+            end if
+        else
+            return null
+        end if
+end function
+

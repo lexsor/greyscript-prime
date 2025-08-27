@@ -33,8 +33,18 @@
   ],
 
   "extensionDependencies": ["ayecue.greybel-vs"],
+  "main": "./extension.js",
+  "activationEvents": ["onLanguage:greyscript"],
 
   "contributes": {
+    "languages": [
+      {
+        "id": "greyscript",
+        "aliases": ["GreyScript", "greyscript"],
+        "extensions": [".src", ".gs"]
+      }
+    ],
+
     "snippets": [
       { "language": "greyscript", "path": "./snippets/strings_define.json" },
       { "language": "greyscript", "path": "./snippets/strings_call.json" },
@@ -45,11 +55,23 @@
       { "language": "greyscript", "path": "./snippets/enum_define.json" },
       { "language": "greyscript", "path": "./snippets/enum_call.json" },
       { "language": "greyscript", "path": "./snippets/router_define.json" },
-      { "language": "greyscript", "path": "./snippets/router_call.json" },
       { "language": "greyscript", "path": "./snippets/construct_define.json" },
       { "language": "greyscript", "path": "./snippets/construct_call.json" },
       { "language": "greyscript", "path": "./snippets/numbers_define.json" },
-      { "language": "greyscript", "path": "./snippets/numbers_call.json" }
-    ]
-  }
+      { "language": "greyscript", "path": "./snippets/numbers_call.json" },
+      { "language": "greyscript", "path": "./snippets/functions_define.json" },
+      { "language": "greyscript", "path": "./snippets/functions_call.json" }
+    ],
+
+    "configuration": {
+      "title": "GreyScript Prime",
+      "properties": {
+        "greyscriptPrime.hover.scanGlobs": {
+          "type": "array",
+          "default": ["lib/**/*.src"],
+          "description": "Glob patterns of .src/.gs files to scan for docblocks."
+        }
+      }
+    }
+  } 
 }

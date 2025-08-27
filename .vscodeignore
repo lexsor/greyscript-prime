@@ -10,3 +10,5 @@ Archive/**
 .gitignore
 .gitattibutes
 extension_instructions.md
+!docs/
+!lib/**

@@ -1,0 +1,40 @@
+// Get Overflow Object Owner
+    // @description **Description:**
+    // @description Determine the permission level of an object
+    // @description ---
+    //
+    // @description **Parameters:**
+    // @param {map<string,method>} overflowObject
+    // @description - `overflowObject`:`<object>` The object returned from the exploit
+    //
+    // @description **Return:**
+    // @return {string}
+    // @description `null` | `string` as `"root"`, `"guest"`, or `"{user_name}"`
+    // @description ---
+    //    
+    // @description **Author:** Svarii
+    // @description **Version:** 0.0.1
+    // @description --- 
+    //
+    // @example objectOwner = get_overflow_owner(overflowResult)
+get_overflow_owner = function(overflowObject)
+    locals.overflowOwner = null
+    locals.overflowObjectType = typeof(locals.overflowObject)
+    if locals.overflowObjectType == "file" then
+        return locals.overflowObject.owner
+    end if
+    if locals.overflowObjectType == "shell" or locals.overflowObjectType == "computer" then
+        if locals.overflowObjectType == "shell" then locals.rootFolder = locals.overflowObject.host_computer.File("/root")
+        if overflowObjectType == "computer" then locals.rootFolder = locals.overflowObject.File("/root")
+        if not locals.rootFolder.has_permission("w") == 0 then return "root"
+        if locals.overflowObjectType == "shell" then locals.homeFolders = locals.overflowObject.host_computer.File("/home").get_folders
+        if locals.overflowObjectType == "computer" then locals.homeFolders = locals.overflowObject.File("/home").get_folders
+        for userFolder in locals.homeFolders
+            if locals.userFolder.has_permission("w") then
+                locals.overflowOwner = locals.userFolder.name
+                if not locals.overflowOwner == "guest" then return locals.userFolder.name
+            end if
+        end for
+    end if
+    return locals.overflowOwner           
+end function

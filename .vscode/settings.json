@@ -1,4 +1,5 @@
 {
   "editor.snippetSuggestions": "top",
-  "editor.suggest.showSnippets": true
+  "editor.suggest.showSnippets": true,
+  "greybel.hoverdocs": true
   }
