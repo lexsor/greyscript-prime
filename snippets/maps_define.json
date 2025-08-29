@@ -1,28 +1,28 @@
 {
-  "_comment_map_get_attributes": "======================== map.get_attributes ========================",
-  "map.get_attributes (define)": {
-    "prefix": "map.get_attributes",
+  "_comment_get_attributes": "======================== get_attributes ========================",
+  "get_attributes (define)": {
+    "prefix": "get_attributes",
     "body": [
-      "map.get_attributes = function()",
+      "get_attributes = function()",
       "\tlocals.attributeList = []",
       "\tfor param in self[\"__isa\"]",
       "\t\tlocals.attributeList.push(locals.param.key)",
-      "\tend for\t",
+      "\tend for",
       "\treturn locals.attributeList",
       "end function"
     ],
-    "description": "Define map.get_attributes()"
+    "description": "Define get_attributes()"
   },
-  "_comment_map_push_once": "======================== map.push_once ========================",
-  "map.push_once (define)": {
-    "prefix": "map.push_once",
+  "_comment_push_once": "======================== push_once ========================",
+  "push_once (define)": {
+    "prefix": "push_once",
     "body": [
-      "map.push_once = function(mapItem)",
+      "push_once = function(mapItem)",
       "\tif not self.hasIndex(self.indexOf(mapItem)) then",
       "\t\tself.push(targetIP)",
       "\tend if\t",
       "end function"
     ],
-    "description": "Define map.push_once(mapItem)"
+    "description": "Define push_once(mapItem)"
   }
 }

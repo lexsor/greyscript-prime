@@ -1,169 +1,169 @@
 {
-  "_comment_number_is_less": "======================== number.is_less ========================",
-  "number.is_less (define)": {
-    "prefix": "number.is_less",
+  "_comment_is_less": "======================== is_less ========================",
+  "is_less (define)": {
+    "prefix": "is_less",
     "body": [
-      "    number.is_less = function(is_less)",
-      "            if locals.is_less < self then return true",
-      "            return false",
-      "    end function"
-    ],
-    "description": "Define number.is_less(is_less)"
-  },
-  "_comment_number_is_more": "======================== number.is_more ========================",
-  "number.is_more (define)": {
-    "prefix": "number.is_more",
-    "body": [
-      "    number.is_more = function(is_more)",
-      "            if locals.is_more > self then return true",
-      "            return false",
-      "    end function"
-    ],
-    "description": "Define number.is_more(is_more)"
-  },
-  "_comment_number_is_negative": "======================== number.is_negative ========================",
-  "number.is_negative (define)": {
-    "prefix": "number.is_negative",
-    "body": [
-      "number.is_negative = function()",
-      "    if self < 0 then return true",
-      "    return false",
+      "is_less = function()",
+      "\tif locals.is_less < self then return true",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.is_negative()"
+    "description": "Define is_less()"
   },
-  "_comment_number_is_positive": "======================== number.is_positive ========================",
-  "number.is_positive (define)": {
-    "prefix": "number.is_positive",
+  "_comment_is_more": "======================== is_more ========================",
+  "is_more (define)": {
+    "prefix": "is_more",
     "body": [
-      "number.is_positive = function()",
-      "    if self >= 0 then return true",
-      "    return false",
+      "is_more = function()",
+      "\tif locals.is_more > self then return true",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.is_positive()"
+    "description": "Define is_more()"
   },
-  "_comment_number_is_zero": "======================== number.is_zero ========================",
-  "number.is_zero (define)": {
-    "prefix": "number.is_zero",
+  "_comment_is_negative": "======================== is_negative ========================",
+  "is_negative (define)": {
+    "prefix": "is_negative",
     "body": [
-      "number.is_zero = function()",
-      "    if self == 0 then return true",
-      "    return false",
+      "is_negative = function()",
+      "\tif self < 0 then return true",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.is_zero()"
+    "description": "Define is_negative()"
   },
-  "_comment_number_clamp": "======================== number.clamp ========================",
-  "number.clamp (define)": {
-    "prefix": "number.clamp",
+  "_comment_is_positive": "======================== is_positive ========================",
+  "is_positive (define)": {
+    "prefix": "is_positive",
     "body": [
-      "number.clamp = function(min, max)",
-      "            if self < locals.min then return locals.min",
-      "            if self > locals.max then return locals.max",
-      "            return self",
+      "is_positive = function()",
+      "\tif self >= 0 then return true",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.clamp(min, max)"
+    "description": "Define is_positive()"
   },
-  "_comment_number_diff": "======================== number.diff ========================",
-  "number.diff (define)": {
-    "prefix": "number.diff",
+  "_comment_is_zero": "======================== is_zero ========================",
+  "is_zero (define)": {
+    "prefix": "is_zero",
     "body": [
-      "    number.diff = function(distanceTo = 0)",
-      "            return abs(self - locals.distanceTo)",
-      "    end function"
-    ],
-    "description": "Define number.diff(distanceTo = 0)"
-  },
-  "_comment_number_div": "======================== number.div ========================",
-  "number.div (define)": {
-    "prefix": "number.div",
-    "body": [
-      "number.div = function(amount = 2)",
-      "    if typeof(locals.amount) == \"number\" then",
-      "        if locals.amount == 0 then return 0",
-      "    end if",
-      "        return self / locals.amount",
+      "is_zero = function()",
+      "\tif self == 0 then return true",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.div(amount = 2)"
+    "description": "Define is_zero()"
   },
-  "_comment_number_is_float": "======================== number.is_float ========================",
-  "number.is_float (define)": {
-    "prefix": "number.is_float",
+  "_comment_clamp": "======================== clamp ========================",
+  "clamp (define)": {
+    "prefix": "clamp",
     "body": [
-      "number.is_float = function()",
+      "clamp = function(min, max)",
+      "\tif self < locals.min then return locals.min",
+      "\tif self > locals.max then return locals.max",
+      "\t\treturn self",
+      "end function"
+    ],
+    "description": "Define clamp(min, max)"
+  },
+  "_comment_diff": "======================== diff ========================",
+  "diff (define)": {
+    "prefix": "diff",
+    "body": [
+      "diff = function(distanceTo = 0)",
+      "\treturn abs(self - locals.distanceTo)",
+      "end function"
+    ],
+    "description": "Define diff(distanceTo = 0)"
+  },
+  "_comment_div": "======================== div ========================",
+  "div (define)": {
+    "prefix": "div",
+    "body": [
+      "div = function(amount = 2)",
+      "\tif typeof(locals.amount) == \"number\" then",
+      "\t\tif locals.amount == 0 then return 0",
+      "\tend if",
+      "\t\treturn self / locals.amount",
+      "end function"
+    ],
+    "description": "Define div(amount = 2)"
+  },
+  "_comment_is_float": "======================== is_float ========================",
+  "is_float (define)": {
+    "prefix": "is_float",
+    "body": [
+      "is_float = function()",
       "\tif str(self).indexOf(\".\") > 0 then return true",
-      "    return false",
+      "\t\treturn false",
       "end function"
     ],
-    "description": "Define number.is_float()"
+    "description": "Define is_float()"
   },
-  "_comment_number_is_integer": "======================== number.is_integer ========================",
-  "number.is_integer (define)": {
-    "prefix": "number.is_integer",
+  "_comment_is_integer": "======================== is_integer ========================",
+  "is_integer (define)": {
+    "prefix": "is_integer",
     "body": [
-      "number.is_integer = function()",
+      "is_integer = function()",
       "\tif not self == round(self) then return false",
-      "    return true",
+      "\t\treturn true",
       "end function"
     ],
-    "description": "Define number.is_integer()"
+    "description": "Define is_integer()"
   },
-  "_comment_number_minus": "======================== number.minus ========================",
-  "number.minus (define)": {
-    "prefix": "number.minus",
+  "_comment_minus": "======================== minus ========================",
+  "minus (define)": {
+    "prefix": "minus",
     "body": [
-      "    number.minus = function(amount = 1)",
-      "            return self - locals.amount",
-      "    end function"
-    ],
-    "description": "Define number.minus(amount = 1)"
-  },
-  "_comment_number_multiply": "======================== number.multiply ========================",
-  "number.multiply (define)": {
-    "prefix": "number.multiply",
-    "body": [
-      "    number.multiply = function(amount = 2)",
-      "            return self * locals.amount",
-      "    end function"
-    ],
-    "description": "Define number.multiply(amount = 2)"
-  },
-  "_comment_number_plus": "======================== number.plus ========================",
-  "number.plus (define)": {
-    "prefix": "number.plus",
-    "body": [
-      "number.plus = function(amount = 1)",
-      "        return self + locals.amount",
+      "minus = function(amount = 1)",
+      "\treturn self - locals.amount",
       "end function"
     ],
-    "description": "Define number.plus(amount = 1)"
+    "description": "Define minus(amount = 1)"
   },
-  "_comment_number_random_from": "======================== number.random_from ========================",
-  "number.random_from (define)": {
-    "prefix": "number.random_from",
+  "_comment_multiply": "======================== multiply ========================",
+  "multiply (define)": {
+    "prefix": "multiply",
     "body": [
-      "    number.random_from = function(min = 0)",
-      "            locals.max = self",
-      "            return floor((rnd * (locals.max - locals.min + 1)) + locals.min)  ",
-      "    end function"
+      "multiply = function(amount = 2)",
+      "\treturn self * locals.amount",
+      "end function"
     ],
-    "description": "Define number.random_from(min = 0)"
+    "description": "Define multiply(amount = 2)"
   },
-  "_comment_number_lerp": "======================== number.lerp ========================",
-  "number.lerp (define)": {
-    "prefix": "number.lerp",
+  "_comment_plus": "======================== plus ========================",
+  "plus (define)": {
+    "prefix": "plus",
     "body": [
-      "    number.lerp = function(min, max, offset)",
-      "        if locals.offset > 1 then locals.offset = 1",
-      "        if locals.offset < 0 then locals.offset = 0",
-      "        locals.difference = locals.max - locals.min",
-      "        locals.scaled_difference = locals.offset * locals.difference",
-      "        return locals.min + locals.scaled_difference",
-      "    end function"
+      "plus = function(amount = 1)",
+      "\treturn self + locals.amount",
+      "end function"
     ],
-    "description": "Define number.lerp(min, max, offset)"
+    "description": "Define plus(amount = 1)"
+  },
+  "_comment_random_from": "======================== random_from ========================",
+  "random_from (define)": {
+    "prefix": "random_from",
+    "body": [
+      "random_from = function(min = 0)",
+      "\tlocals.max = self",
+      "\treturn floor((rnd * (locals.max - locals.min + 1)) + locals.min)  ",
+      "end function"
+    ],
+    "description": "Define random_from(min = 0)"
+  },
+  "_comment_lerp": "======================== lerp ========================",
+  "lerp (define)": {
+    "prefix": "lerp",
+    "body": [
+      "lerp = function(min, max, offset)",
+      "\tif locals.offset > 1 then locals.offset = 1",
+      "\tif locals.offset < 0 then locals.offset = 0",
+      "\tlocals.difference = locals.max - locals.min",
+      "\tlocals.scaled_difference = locals.offset * locals.difference",
+      "\t\treturn locals.min + locals.scaled_difference",
+      "end function"
+    ],
+    "description": "Define lerp(min, max, offset)"
   }
 }

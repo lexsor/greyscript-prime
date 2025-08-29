@@ -1,5 +1,5 @@
 {
-  "_comment_construct_fetch_whois": "======================== fetch_whois ========================",
+  "_comment_fetch_whois": "======================== fetch_whois ========================",
   "fetch_whois (call)": {
     "prefix": "fetch_whois",
     "body": [
@@ -7,7 +7,7 @@
     ],
     "description": "Call .fetch_whois(routerPublicIPAddress) on a construct"
   },
-  "_comment_construct_file_location_ident": "======================== file_location_ident ========================",
+  "_comment_file_location_ident": "======================== file_location_ident ========================",
   "file_location_ident (call)": {
     "prefix": "file_location_ident",
     "body": [
@@ -15,7 +15,7 @@
     ],
     "description": "Call .file_location_ident(absoluteLocation) on a construct"
   },
-  "_comment_construct_id_self": "======================== id_self ========================",
+  "_comment_id_self": "======================== id_self ========================",
   "id_self (call)": {
     "prefix": "id_self",
     "body": [
@@ -23,7 +23,7 @@
     ],
     "description": "Call id_self() on a construct"
   },
-  "_comment_construct_fetch_exploit_requirements": "======================== fetch_exploit_requirements ========================",
+  "_comment_fetch_exploit_requirements": "======================== fetch_exploit_requirements ========================",
   "fetch_exploit_requirements (call)": {
     "prefix": "fetch_exploit_requirements",
     "body": [

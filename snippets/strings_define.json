@@ -1,84 +1,84 @@
 {
-  "_comment_italic": "======================== string.italic ========================",
-  "string.italic (define)": {
-    "prefix": "string.italic",
+  "_comment_italic": "======================== italic ========================",
+  "italic (define)": {
+    "prefix": "italic",
     "body": [
-      "string.italic = function()",
-      "    return \"<i>\" + self + \"</i>\"",
+      "italic = function()",
+      "\treturn \"<i>\" + self + \"</i>\"",
       "end function"
     ],
-    "description": "Define string.italic()"
+    "description": "Define italic()"
   },
-  "_comment_line_indent": "======================== string.line_indent ========================",
-  "string.line_indent (define)": {
-    "prefix": "string.line_indent",
+  "_comment_line_indent": "======================== line_indent ========================",
+  "line_indent (define)": {
+    "prefix": "line_indent",
     "body": [
-      "string.line_indent = function(lineIndent = \"15%\", closeTag = true)",
-      "    if locals.closeTag == false then",
-      "        return \"<line-indent=\" + locals.lineIndent + \">\" + self",
-      "    else",
-      "        return \"<line-indent=\" + locals.lineIndent + \">\" + self + \"</line-indent>\"",
-      "    end if",
-      "    return null",
+      "line_indent = function(lineIndent = \"15%\", closeTag = true)",
+      "\tif locals.closeTag == false then",
+      "\t\treturn \"<line-indent=\" + locals.lineIndent + \">\" + self",
+      "\telse",
+      "\t\treturn \"<line-indent=\" + locals.lineIndent + \">\" + self + \"</line-indent>\"",
+      "\tend if",
+      "\t\treturn null",
       "end function"
     ],
-    "description": "Define string.line_indent(lineIndent = \"15%\", closeTag = true)"
+    "description": "Define line_indent(lineIndent = \"15%\", closeTag = true)"
   },
-  "_comment_lowercase": "======================== string.lowercase ========================",
-  "string.lowercase (define)": {
-    "prefix": "string.lowercase",
+  "_comment_lowercase": "======================== lowercase ========================",
+  "lowercase (define)": {
+    "prefix": "lowercase",
     "body": [
-      "string.lowercase = function()",
-      "    return \"<lowercase>\" + self + \"</lowercase>\"",
+      "lowercase = function()",
+      "\treturn \"<lowercase>\" + self + \"</lowercase>\"",
       "end function"
     ],
-    "description": "Define string.lowercase()"
+    "description": "Define lowercase()"
   },
-  "_comment_margin": "======================== string.margin ========================",
-  "string.margin (define)": {
-    "prefix": "string.margin",
+  "_comment_margin": "======================== margin ========================",
+  "margin (define)": {
+    "prefix": "margin",
     "body": [
-      "string.margin = function(marginSpace = \"5em\")",
-      "    return \"<margin=\" + locals.marginSpace + \">\" + self + \"</margin>\"",
+      "margin = function(marginSpace = \"5em\")",
+      "\treturn \"<margin=\" + locals.marginSpace + \">\" + self + \"</margin>\"",
       "end function"
     ],
-    "description": "Define string.margin(marginSpace = \"5em\")"
+    "description": "Define margin(marginSpace = \"5em\")"
   },
-  "_comment_mark": "======================== string.mark ========================",
-  "string.mark (define)": {
-    "prefix": "string.mark",
+  "_comment_mark": "======================== mark ========================",
+  "mark (define)": {
+    "prefix": "mark",
     "body": [
-      "string.mark = function(color=\"#FFFF00BF\")",
-      "    return \"<mark=\" + locals.color + \">\" + self + \"</mark>\"",
+      "mark = function(color=\"#FFFF00BF\")",
+      "\treturn \"<mark=\" + locals.color + \">\" + self + \"</mark>\"",
       "end function"
     ],
-    "description": "Define string.mark(color=\"#FFFF00BF\")"
+    "description": "Define mark(color=\"#FFFF00BF\")"
   },
-  "_comment_alpha": "======================== string.alpha ========================",
-  "string.alpha (define)": {
-    "prefix": "string.alpha",
+  "_comment_alpha": "======================== alpha ========================",
+  "alpha (define)": {
+    "prefix": "alpha",
     "body": [
-      "string.alpha = function(hexOpacity = \"#FF\")",
-      "    return \"<alpha=\" + locals.hexOpacity + \">\" + self",
+      "alpha = function(hexOpacity = \"#FF\")",
+      "\treturn \"<alpha=\" + locals.hexOpacity + \">\" + self",
       "end function"
     ],
-    "description": "Define string.alpha(hexOpacity = \"#FF\")"
+    "description": "Define alpha(hexOpacity = \"#FF\")"
   },
-  "_comment_bold": "======================== string.bold ========================",
-  "string.bold (define)": {
-    "prefix": "string.bold",
+  "_comment_bold": "======================== bold ========================",
+  "bold (define)": {
+    "prefix": "bold",
     "body": [
-      "string.bold = function()",
-      "    return \"<b>\" + self + \"</b>\"",
+      "bold = function()",
+      "\treturn \"<b>\" + self + \"</b>\"",
       "end function"
     ],
-    "description": "Define string.bold()"
+    "description": "Define bold()"
   },
-  "_comment_color": "======================== string.color ========================",
-  "string.color (define)": {
-    "prefix": "string.color",
+  "_comment_color": "======================== color ========================",
+  "color (define)": {
+    "prefix": "color",
     "body": [
-      "string.color = function(colorValue)",
+      "color = function(colorValue)",
       "\tif not typeof(colorValue) == \"string\" then return self",
       "\t//*****************************************************",
       "\t// Red HEX Codes",
@@ -254,338 +254,338 @@
       "\treturn \"<color=\" + colorValue + \">\" + self + \"</color>\"",
       "end function"
     ],
-    "description": "Define string.color(colorValue)"
+    "description": "Define color(colorValue)"
   },
-  "_comment_cspace": "======================== string.cspace ========================",
-  "string.cspace (define)": {
-    "prefix": "string.cspace",
+  "_comment_cspace": "======================== cspace ========================",
+  "cspace (define)": {
+    "prefix": "cspace",
     "body": [
-      "string.cspace = function(charSpacing = \"1em\", closeTag = true)",
-      "    if locals.closeTag == true then",
-      "        return \"<cspace=\" + locals.charSpacing + \">\" + self + \"</cspace>\"",
-      "    end if",
-      "    if locals.closeTag == false then",
-      "        return \"<cspace=\" + locals.charSpacing + \">\" + self",
-      "    end if",
+      "cspace = function(charSpacing = \"1em\", closeTag = true)",
+      "\tif locals.closeTag == true then",
+      "\t\treturn \"<cspace=\" + locals.charSpacing + \">\" + self + \"</cspace>\"",
+      "\tend if",
+      "\tif locals.closeTag == false then",
+      "\t\treturn \"<cspace=\" + locals.charSpacing + \">\" + self",
+      "\tend if",
       "end function"
     ],
-    "description": "Define string.cspace(charSpacing = \"1em\", closeTag = true)"
+    "description": "Define cspace(charSpacing = \"1em\", closeTag = true)"
   },
-  "_comment_indent": "======================== string.indent ========================",
-  "string.indent (define)": {
-    "prefix": "string.indent",
+  "_comment_indent": "======================== indent ========================",
+  "indent (define)": {
+    "prefix": "indent",
     "body": [
-      "string.indent = function(indentPercent=\"15%\", closeTag = true)",
-      "    if locals.closeTag == false then",
-      "        return \"<indent=\" + locals.indentPercent + \">\" + self",
-      "    else",
-      "        return \"<indent=\" + locals.indentPercent + \">\" + self + \"</indent>\"",
-      "    end if",
-      "    return null",
+      "indent = function(indentPercent=\"15%\", closeTag = true)",
+      "\tif locals.closeTag == false then",
+      "\t\treturn \"<indent=\" + locals.indentPercent + \">\" + self",
+      "\telse",
+      "\t\treturn \"<indent=\" + locals.indentPercent + \">\" + self + \"</indent>\"",
+      "\tend if",
+      "\treturn null",
       "end function"
     ],
-    "description": "Define string.indent(indentPercent=\"15%\", closeTag = true)"
+    "description": "Define indent(indentPercent=\"15%\", closeTag = true)"
   },
-  "_comment_extract": "======================== string.extract ========================",
-  "string.extract (define)": {
-    "prefix": "string.extract",
+  "_comment_extract": "======================== extract ========================",
+  "extract (define)": {
+    "prefix": "extract",
     "body": [
-      "string.extract = function(self, tagStart = \"<b>\", tagEnd = \"</b>\")",
-      "    locals.startIndex = self.indexOf(tagStart) + tagStart.len",
-      "    locals.endIndex = self.indexOf(tagEnd)",
-      "    return slice(self, locals.startIndex, locals.endIndex)",
+      "extract = function(self, tagStart = \"<b>\", tagEnd = \"</b>\")",
+      "\tlocals.startIndex = self.indexOf(tagStart) + tagStart.len",
+      "\tlocals.endIndex = self.indexOf(tagEnd)",
+      "\treturn slice(self, locals.startIndex, locals.endIndex)",
       "end function"
     ],
-    "description": "Define string.extract(self): substring between tagStart and tagEnd (defaults to <b>\u2026</b>)"
+    "description": "Define extract(self): substring between tagStart and tagEnd (defaults to <b>\u2026</b>)"
   },
-  "_comment_format": "======================== string.format ========================",
-  "string.format (define)": {
-    "prefix": "string.format",
+  "_comment_format": "======================== format ========================",
+  "format (define)": {
+    "prefix": "format",
     "body": [
-      "string.format = function(self, args, delim = \"%s\")",
-      "    locals.splitStr = self.split(locals.delim)",
-      "    locals.recompStr = \"\"",
-      "    for i in range(0, locals.args.len()-1)",
-      "        locals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]",
-      "    end for",
-      "    locals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]",
-      "    return locals.recompStr",
+      "format = function(self, args, delim = \"%s\")",
+      "\tlocals.splitStr = self.split(locals.delim)",
+      "\tlocals.recompStr = \"\"",
+      "\tfor i in range(0, locals.args.len()-1)",
+      "\t\tlocals.recompStr = locals.recompStr + locals.splitStr[locals.i] + locals.args[locals.i]",
+      "\tend for",
+      "\tlocals.recompStr = locals.recompStr + locals.splitStr[locals.splitStr.len()-1]",
+      "\t\treturn locals.recompStr",
       "end function"
     ],
-    "description": "Define string.format(self, args, delim=\"%s\"): recomposes template using %s placeholders"
+    "description": "Define format(self, args, delim=\"%s\"): recomposes template using %s placeholders"
   },
-  "_comment_mask": "======================== string.mask ========================",
-  "string.mask (define)": {
-    "prefix": "string.mask",
+  "_comment_mask": "======================== mask ========================",
+  "mask (define)": {
+    "prefix": "mask",
     "body": [
-      "string.mask = function(self, maskString = true, maskChar = char(42), maskColor = null)",
-      "    if locals.maskColor != null then",
-      "        locals.maskChar = \"<\" + locals.maskColor + \">\" + locals.maskChar + \"</color>\"",
-      "    end if",
-      "    locals.ipPattern = \"\\b(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\b\"",
-      "    locals.matchList = self.matches(locals.ipPattern)",
-      "    locals.newString = \"\"",
-      "    if locals.maskString == false then return self",
-      "    if locals.matchList.len > 0 then",
-      "        locals.newString = self",
-      "        for match in locals.matchList",
-      "            locals.newString = locals.newString.replace(locals.match.value, locals.maskChar * locals.match.value.len)",
-      "        end for",
-      "        return locals.newString",
-      "    else",
-      "        return self",
-      "    end if",
+      "mask = function(self, maskString = true, maskChar = char(42), maskColor = null)",
+      "\tif locals.maskColor != null then",
+      "\t\tlocals.maskChar = \"<\" + locals.maskColor + \">\" + locals.maskChar + \"</color>\"",
+      "\tend if",
+      "\tlocals.ipPattern = \"\\b(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\b\"",
+      "\tlocals.matchList = self.matches(locals.ipPattern)",
+      "\tlocals.newString = \"\"",
+      "\tif locals.maskString == false then return self",
+      "\tif locals.matchList.len > 0 then",
+      "\t\tlocals.newString = self",
+      "\t\tfor match in locals.matchList",
+      "\t\t\tlocals.newString = locals.newreplace(locals.match.value, locals.maskChar * locals.match.value.len)",
+      "\t\tend for",
+      "\t\treturn locals.newString",
+      "\telse",
+      "\t\treturn self",
+      "\tend if",
       "end function"
     ],
-    "description": "Define string.mask(self, maskString=true, maskChar='*', maskColor=null): masks IPs in the string"
+    "description": "Define mask(self, maskString=true, maskChar='*', maskColor=null): masks IPs in the string"
   },
-  "_comment_remove_bold": "======================== string.remove_bold ========================",
-  "string.remove_bold (define)": {
-    "prefix": "string.remove_bold",
+  "_comment_remove_bold": "======================== remove_bold ========================",
+  "remove_bold (define)": {
+    "prefix": "remove_bold",
     "body": [
-      "string.remove_bold = function(self)",
-      "    locals.newString = self.remove(\"<b>\")",
-      "    return locals.newString.remove(\"</b>\")",
+      "remove_bold = function(self)",
+      "\tlocals.newString = self.remove(\"<b>\")",
+      "\t\treturn locals.newremove(\"</b>\")",
       "end function"
     ],
-    "description": "Define string.remove_bold(self): strips <b> and </b> tags"
+    "description": "Define remove_bold(self): strips <b> and </b> tags"
   },
-  "_comment_remove_char_first": "======================== string.remove_char_first ========================",
-  "string.remove_char_first (define)": {
-    "prefix": "string.remove_char_first",
+  "_comment_remove_char_first": "======================== remove_char_first ========================",
+  "remove_char_first (define)": {
+    "prefix": "remove_char_first",
     "body": [
-      "string.remove_char_first = function(self)",
-      "    return slice(self, 1, self.len)",
+      "remove_char_first = function(self)",
+      "\treturn slice(self, 1, self.len)",
       "end function"
     ],
-    "description": "Define string.remove_char_first(self): removes the first character"
+    "description": "Define remove_char_first(self): removes the first character"
   },
-  "_comment_remove_char_last": "======================== string.remove_char_last ========================",
-  "string.remove_char_last (define)": {
-    "prefix": "string.remove_char_last",
+  "_comment_remove_char_last": "======================== remove_char_last ========================",
+  "remove_char_last (define)": {
+    "prefix": "remove_char_last",
     "body": [
-      "string.remove_char_last = function(self)",
-      "    return slice(self, 0, (self.len - 1))",
+      "remove_char_last = function(self)",
+      "\treturn slice(self, 0, (self.len - 1))",
       "end function"
     ],
-    "description": "Define string.remove_char_last(self): removes the last character"
+    "description": "Define remove_char_last(self): removes the last character"
   },
-  "_comment_remove_italic": "======================== string.remove_italic ========================",
-  "string.remove_italic (define)": {
-    "prefix": "string.remove_italic",
+  "_comment_remove_italic": "======================== remove_italic ========================",
+  "remove_italic (define)": {
+    "prefix": "remove_italic",
     "body": [
-      "string.remove_italic = function(self)",
-      "    locals.newString = self.remove(\"<i>\")",
-      "    return locals.newString.remove(\"</i>\")",
+      "remove_italic = function(self)",
+      "\tlocals.newString = self.remove(\"<i>\")",
+      "\treturn locals.newremove(\"</i>\")",
       "end function"
     ],
-    "description": "Define string.remove_italic(self): strips <i> and </i> tags"
+    "description": "Define remove_italic(self): strips <i> and </i> tags"
   },
-  "_comment_remove_mark": "======================== string.remove_mark ========================",
-  "string.remove_mark (define)": {
-    "prefix": "string.remove_mark",
+  "_comment_remove_mark": "======================== remove_mark ========================",
+  "remove_mark (define)": {
+    "prefix": "remove_mark",
     "body": [
-      "string.remove_mark = function(self)",
-      "    locals.newString = self.remove(\"<mark>\")",
-      "    return locals.newString.remove(\"</mark>\")",
+      "remove_mark = function(self)",
+      "\tlocals.newString = self.remove(\"<mark>\")",
+      "\treturn locals.newremove(\"</mark>\")",
       "end function"
     ],
-    "description": "Define string.remove_mark(self): strips <mark> and </mark> tags"
+    "description": "Define remove_mark(self): strips <mark> and </mark> tags"
   },
-  "_comment_remove_strike": "======================== string.remove_strike ========================",
-  "string.remove_strike (define)": {
-    "prefix": "string.remove_strike",
+  "_comment_remove_strike": "======================== remove_strike ========================",
+  "remove_strike (define)": {
+    "prefix": "remove_strike",
     "body": [
-      "string.remove_strike = function(self)",
-      "    locals.newString = self.remove(\"<s>\")",
-      "    return locals.newString.remove(\"</s>\")",
+      "remove_strike = function(self)",
+      "\tlocals.newString = self.remove(\"<s>\")",
+      "\treturn locals.newremove(\"</s>\")",
       "end function"
     ],
-    "description": "Define string.remove_strike(self): strips <s> and </s> tags"
+    "description": "Define remove_strike(self): strips <s> and </s> tags"
   },
-  "_comment_remove_sub": "======================== string.remove_sub ========================",
-  "string.remove_sub (define)": {
-    "prefix": "string.remove_sub",
+  "_comment_remove_sub": "======================== remove_sub ========================",
+  "remove_sub (define)": {
+    "prefix": "remove_sub",
     "body": [
-      "string.remove_sub = function(self)",
-      "    locals.newString = self.remove(\"<sub>\")",
-      "    return locals.newString.remove(\"</sub>\")",
+      "remove_sub = function(self)",
+      "\tlocals.newString = self.remove(\"<sub>\")",
+      "\treturn locals.newremove(\"</sub>\")",
       "end function"
     ],
-    "description": "Define string.remove_sub(self): strips <sub> and </sub> tags"
+    "description": "Define remove_sub(self): strips <sub> and </sub> tags"
   },
-  "_comment_remove_sup": "======================== string.remove_sup ========================",
-  "string.remove_sup (define)": {
-    "prefix": "string.remove_sup",
+  "_comment_remove_sup": "======================== remove_sup ========================",
+  "remove_sup (define)": {
+    "prefix": "remove_sup",
     "body": [
-      "string.remove_sup = function(self)",
-      "    locals.newString = self.remove(\"<sup>\")",
-      "    return locals.newString.remove(\"</sup>\")",
+      "remove_sup = function(self)",
+      "\tlocals.newString = self.remove(\"<sup>\")",
+      "\treturn locals.newremove(\"</sup>\")",
       "end function"
     ],
-    "description": "Define string.remove_sup(self): strips <sup> and </sup> tags"
+    "description": "Define remove_sup(self): strips <sup> and </sup> tags"
   },
-  "_comment_remove_underline": "======================== string.remove_underline ========================",
-  "string.remove_underline (define)": {
-    "prefix": "string.remove_underline",
+  "_comment_remove_underline": "======================== remove_underline ========================",
+  "remove_underline (define)": {
+    "prefix": "remove_underline",
     "body": [
-      "string.remove_underline = function(self)",
-      "    locals.newString = self.remove(\"<u>\")",
-      "    return locals.newString.remove(\"</u>\")",
+      "remove_underline = function(self)",
+      "\tlocals.newString = self.remove(\"<u>\")",
+      "\treturn locals.newremove(\"</u>\")",
       "end function"
     ],
-    "description": "Define string.remove_underline(self): strips <u> and </u> tags"
+    "description": "Define remove_underline(self): strips <u> and </u> tags"
   },
-  "_comment_align": "======================== string.align ========================",
-  "string.align (define)": {
-    "prefix": "string.align",
+  "_comment_align": "======================== align ========================",
+  "align (define)": {
+    "prefix": "align",
     "body": [
-      "string.align = function(self, alignment = \"center\", closeTag = true)",
-      "    locals.newString = \"<align=\" + locals.alignment + \">\" + self",
-      "    if locals.closeTag == true then locals.newString = locals.newString + \"</align>\"",
-      "    return locals.newString",
+      "align = function(self, alignment = \"center\", closeTag = true)",
+      "\tlocals.newString = \"<align=\" + locals.alignment + \">\" + self",
+      "\tif locals.closeTag == true then locals.newString = locals.newString + \"</align>\"",
+      "\t\treturn locals.newString",
       "end function"
     ],
-    "description": "Define string.align(self, alignment=\"center\", closeTag=true): wraps string with <align> tags"
+    "description": "Define align(self, alignment=\"center\", closeTag=true): wraps string with <align> tags"
   },
-  "_comment_uppercase": "======================== string.uppercase ========================",
-  "string.uppercase (define)": {
-    "prefix": "string.uppercase",
+  "_comment_uppercase": "======================== uppercase ========================",
+  "uppercase (define)": {
+    "prefix": "uppercase",
     "body": [
-      "string.uppercase = function()",
-      "        return \"<uppercase>\" + self + \"</uppercase>\"",
-      "    end function"
-    ],
-    "description": "Define string.uppercase()"
-  },
-  "_comment_voffset": "======================== string.voffset ========================",
-  "string.voffset (define)": {
-    "prefix": "string.voffset",
-    "body": [
-      "string.voffset = function(verticalOffset = \"1em\")",
-      "        return \"<voffset=\" + locals.verticalOffset + \">\" + self + \"</voffset>\"",
-      "    end function"
-    ],
-    "description": "Define string.voffset(verticalOffset = \"1em\")"
-  },
-  "_comment_width": "======================== string.width ========================",
-  "string.width (define)": {
-    "prefix": "string.width",
-    "body": [
-      "string.width = function(hSize = \"50%\")",
-      "        return \"<width=\" + locals.hSize + \">\" + self + \"</width>\"",
-      "    end function"
-    ],
-    "description": "Define string.width(hSize = \"50%\")"
-  },
-  "_comment_underline": "======================== string.underline ========================",
-  "string.underline (define)": {
-    "prefix": "string.underline",
-    "body": [
-      "string.underline = function()",
-      "    return \"<u>\" + self + \"</u>\"",
+      "uppercase = function()",
+      "\treturn \"<uppercase>\" + self + \"</uppercase>\"",
       "end function"
     ],
-    "description": "Define string.underline()"
+    "description": "Define uppercase()"
   },
-  "_comment_pos": "======================== string.pos ========================",
-  "string.pos (define)": {
-    "prefix": "string.pos",
+  "_comment_voffset": "======================== voffset ========================",
+  "voffset (define)": {
+    "prefix": "voffset",
     "body": [
-      "string.pos = function(position = \"50%\")",
-      "    return \"<pos=\" + locals.position + \">\" + self",
+      "voffset = function(verticalOffset = \"1em\")",
+      "\treturn \"<voffset=\" + locals.verticalOffset + \">\" + self + \"</voffset>\"",
       "end function"
     ],
-    "description": "Define string.pos(position = \"50%\")"
+    "description": "Define voffset(verticalOffset = \"1em\")"
   },
-  "_comment_rotate": "======================== string.rotate ========================",
-  "string.rotate (define)": {
-    "prefix": "string.rotate",
+  "_comment_width": "======================== width ========================",
+  "width (define)": {
+    "prefix": "width",
     "body": [
-      "string.rotate = function(degreesRotation = \"45\")",
-      "    return \"<rotate=\" + char(34) + locals.degreesRotation + char(34) + \">\" + self + \"</rotate>\"",
+      "width = function(hSize = \"50%\")",
+      "\treturn \"<width=\" + locals.hSize + \">\" + self + \"</width>\"",
       "end function"
     ],
-    "description": "Define string.rotate(degreesRotation = \"45\")"
+    "description": "Define width(hSize = \"50%\")"
   },
-  "_comment_size": "======================== string.size ========================",
-  "string.size (define)": {
-    "prefix": "string.size",
+  "_comment_underline": "======================== underline ========================",
+  "underline (define)": {
+    "prefix": "underline",
     "body": [
-      "string.size = function(textSize = \"5em\")",
-      "    return \"<size=\" + locals.textSize + \">\" + self + \"</size>\"",
+      "underline = function()",
+      "\treturn \"<u>\" + self + \"</u>\"",
       "end function"
     ],
-    "description": "Define string.size(textSize = \"5em\")"
+    "description": "Define underline()"
   },
-  "_comment_strike": "======================== string.strike ========================",
-  "string.strike (define)": {
-    "prefix": "string.strike",
+  "_comment_pos": "======================== pos ========================",
+  "pos (define)": {
+    "prefix": "pos",
     "body": [
-      "string.strike = function()",
-      "        return \"<s>\" + self + \"</s>\"",
-      "    end function"
-    ],
-    "description": "Define string.strike()"
-  },
-  "_comment_sub": "======================== string.sub ========================",
-  "string.sub (define)": {
-    "prefix": "string.sub",
-    "body": [
-      "string.sub = function()",
-      "        return \"<sub>\" + self + \"</sub>\"",
-      "    end function"
-    ],
-    "description": "Define string.sub()"
-  },
-  "_comment_sup": "======================== string.sup ========================",
-  "string.sup (define)": {
-    "prefix": "string.sup",
-    "body": [
-      "string.sup = function()",
-      "        return \"<sup>\" + self + \"</sup>\"",
-      "    end function"
-    ],
-    "description": "Define string.sup()"
-  },
-  "_comment_mspace": "======================== string.mspace ========================",
-  "string.mspace (define)": {
-    "prefix": "string.mspace",
-    "body": [
-      "string.mspace = function(monospace = \"2.75em\")",
-      "    return \"<mspace=\" + locals.monospace + \">\" + self + \"</mspace>\"",
+      "pos = function(position = \"50%\")",
+      "\treturn \"<pos=\" + locals.position + \">\" + self",
       "end function"
     ],
-    "description": "Define string.mspace(monospace = \"2.75em\")"
+    "description": "Define pos(position = \"50%\")"
   },
-  "_comment_nobr": "======================== string.nobr ========================",
-  "string.nobr (define)": {
-    "prefix": "string.nobr",
+  "_comment_rotate": "======================== rotate ========================",
+  "rotate (define)": {
+    "prefix": "rotate",
     "body": [
-      "string.nobr = function()",
-      "    return \"<nobr>\" + self + \"</nobr>\"",
+      "rotate = function(degreesRotation = \"45\")",
+      "\treturn \"<rotate=\" + char(34) + locals.degreesRotation + char(34) + \">\" + self + \"</rotate>\"",
       "end function"
     ],
-    "description": "Define string.nobr()"
+    "description": "Define rotate(degreesRotation = \"45\")"
   },
-  "_comment_noparse": "======================== string.noparse ========================",
-  "string.noparse (define)": {
-    "prefix": "string.noparse",
+  "_comment_size": "======================== size ========================",
+  "size (define)": {
+    "prefix": "size",
     "body": [
-      "string.noparse = function()",
-      "    return \"<noparse>\" + self + \"</noparse>\"",
+      "size = function(textSize = \"5em\")",
+      "\treturn \"<size=\" + locals.textSize + \">\" + self + \"</size>\"",
       "end function"
     ],
-    "description": "Define string.noparse()"
+    "description": "Define size(textSize = \"5em\")"
   },
-  "_comment_page": "======================== string.page ========================",
-  "string.page (define)": {
-    "prefix": "string.page",
+  "_comment_strike": "======================== strike ========================",
+  "strike (define)": {
+    "prefix": "strike",
     "body": [
-      "string.page = function()",
-      "        return self + \"<page>\"",
-      "    end function"
+      "strike = function()",
+      "\treturn \"<s>\" + self + \"</s>\"",
+      "end function"
     ],
-    "description": "Define string.page()"
+    "description": "Define strike()"
+  },
+  "_comment_sub": "======================== sub ========================",
+  "sub (define)": {
+    "prefix": "sub",
+    "body": [
+      "sub = function()",
+      "\treturn \"<sub>\" + self + \"</sub>\"",
+      "end function"
+    ],
+    "description": "Define sub()"
+  },
+  "_comment_sup": "======================== sup ========================",
+  "sup (define)": {
+    "prefix": "sup",
+    "body": [
+      "sup = function()",
+      "\treturn \"<sup>\" + self + \"</sup>\"",
+      "end function"
+    ],
+    "description": "Define sup()"
+  },
+  "_comment_mspace": "======================== mspace ========================",
+  "mspace (define)": {
+    "prefix": "mspace",
+    "body": [
+      "mspace = function(monospace = \"2.75em\")",
+      "\treturn \"<mspace=\" + locals.monospace + \">\" + self + \"</mspace>\"",
+      "end function"
+    ],
+    "description": "Define mspace(monospace = \"2.75em\")"
+  },
+  "_comment_nobr": "======================== nobr ========================",
+  "nobr (define)": {
+    "prefix": "nobr",
+    "body": [
+      "nobr = function()",
+      "\treturn \"<nobr>\" + self + \"</nobr>\"",
+      "end function"
+    ],
+    "description": "Define nobr()"
+  },
+  "_comment_noparse": "======================== noparse ========================",
+  "noparse (define)": {
+    "prefix": "noparse",
+    "body": [
+      "noparse = function()",
+      "\treturn \"<noparse>\" + self + \"</noparse>\"",
+      "end function"
+    ],
+    "description": "Define noparse()"
+  },
+  "_comment_page": "======================== page ========================",
+  "page (define)": {
+    "prefix": "page",
+    "body": [
+      "page = function()",
+      "\treturn self + \"<page>\"",
+      "end function"
+    ],
+    "description": "Define page()"
   }
 }

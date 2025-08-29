@@ -31,13 +31,13 @@
     ],
     "description": "Call .underline() on a string"
   },
-  "_comment_line_indent": "======================== .line_indent ========================",
-  ".line_indent (call)": {
+  "_comment_line_indent": "======================== line_indent ========================",
+  "line_indent (call)": {
     "prefix": "line_indent",
     "body": [
       "line_indent(${1:\"15%\"}, ${2:true})$0"
     ],
-    "description": "Call .line_indent(lineIndent, closeTag) on a string"
+    "description": "Call line_indent(lineIndent, closeTag) on a string"
   },
   "_comment_italic": "======================== .italic ========================",
   ".italic (call)": {

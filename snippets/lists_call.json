@@ -1,46 +1,38 @@
 {
-  "_comment_list_crop": "======================== list.crop ========================",
-  "list.crop (call)": {
+  "_comment_crop": "======================== crop ========================",
+  "crop (call)": {
     "prefix": "crop",
     "body": [
       "crop()$0"
     ],
     "description": "Call .crop() on a list"
   },
-  "_comment_list_push_once": "======================== list.push_once ========================",
-  "list.push_once (call)": {
+  "_comment_push_once": "======================== push_once ========================",
+  "push_once (call)": {
     "prefix": "push_once",
     "body": [
       "push_once(${1:listItem})$0"
     ],
-    "description": "Call .push_once(listItem) on a list"
+    "description": "Call push_once(listItem) on a list"
   },
-  "_comment_list_string": "======================== list.string ========================",
-  "list.string (call)": {
+  "_comment_string": "======================== string ========================",
+  "string (call)": {
     "prefix": "string",
     "body": [
       "string(${1:char(10})$0"
     ],
     "description": "Call .string(seperator) on a list"
   },
-  "_comment_list_crop_dot": "======================== list.crop (dot trigger) ========================",
-  "list.crop (call dot)": {
+  "_comment_crop_dot": "======================== crop (dot trigger) ========================",
+  "crop (call dot)": {
     "prefix": ".crop",
     "body": [
       ".crop()$0"
     ],
     "description": "Call .crop() on a list"
   },
-  "_comment_list_push_once_dot": "======================== list.push_once (dot trigger) ========================",
-  "list.push_once (call dot)": {
-    "prefix": ".push_once",
-    "body": [
-      ".push_once(${1:listItem})$0"
-    ],
-    "description": "Call .push_once(listItem) on a list"
-  },
-  "_comment_list_string_dot": "======================== list.string (dot trigger) ========================",
-  "list.string (call dot)": {
+  "_comment_string_dot": "======================== string (dot trigger) ========================",
+  "string (call dot)": {
     "prefix": ".string",
     "body": [
       ".string(${1:char(10})$0"

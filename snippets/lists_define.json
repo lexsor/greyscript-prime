@@ -1,39 +1,39 @@
 {
-  "_comment_list_crop": "======================== list.crop ========================",
-  "list.crop (define)": {
-    "prefix": "list.crop",
+  "_comment_crop": "======================== crop ========================",
+  "crop ()": {
+    "prefix": "crop",
     "body": [
-      "list.crop = function()",
-      "        while not self[self.len - 1].len > 0",
-      "            self.remove(self.len - 1)",
-      "        end while",
-      "        while not self[0].len > 0",
-      "            self.remove(0)",
-      "        end while",
-      "        return self",
-      "    end function"
-    ],
-    "description": "Define list.crop()"
-  },
-  "_comment_list_push_once": "======================== list.push_once ========================",
-  "list.push_once (define)": {
-    "prefix": "list.push_once",
-    "body": [
-      "list.push_once = function(listItem)",
-      "\tif not self.hasIndex(self.indexOf(locals.listItem)) then",
-      "\t\tself.push(locals.listItem)",
-      "\tend if\t",
+      "crop = function()",
+      "\twhile not self[self.len - 1].len > 0",
+      "\t\tself.remove(self.len - 1)",
+      "\tend while",
+      "\twhile not self[0].len > 0",
+      "\t\tself.remove(0)",
+      "\tend while",
+      "\treturn self",
       "end function"
     ],
-    "description": "Define list.push_once(listItem)"
+    "description": "Define .crop()"
   },
-  "_comment_list_string": "======================== list.string ========================",
-  "list.string (define)": {
-    "prefix": "list.string",
+  "_comment_push_once": "======================== push_once ========================",
+  "push_once (define)": {
+    "prefix": "push_once",
+    "body": [
+      "push_once = function(listItem)",
+      "\tif not self.hasIndex(self.indexOf(locals.listItem)) then",
+      "\t\tself.push(locals.listItem)",
+      "\tend if",
+      "end function"
+    ],
+    "description": "Define push_once(listItem)"
+  },
+  "_comment_string": "======================== string ========================",
+  "string (define)": {
+    "prefix": "string",
     "body": [
       "list.string = function(seperator = char(10))",
-      "    locals.printString = split(self, locals.seperator)",
-      "    return locals.printString",
+      "\tlocals.printString = split(self, locals.seperator)",
+      "\t\treturn locals.printString",
       "end function"
     ],
     "description": "Define list.string(seperator = char(10)"
